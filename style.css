@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url("assets/images/main-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #0e0e0e !important;
+
+}
+.container{
+    max-width: 1620px !important;
+}
+header{
+    padding-top: 40px;
+}
+.site-logo a>img{
+    width: 100%;
+    padding: 30px;
+}
+.banner-section{
+   padding-bottom: 70px;
+}
+.header-content h1{
+    font-weight: bold;
+    font-size: 5vh;
+    color: #FFF;
+    margin-top: 40px;
+}
+@media (min-width: 992px) {
+    .header-content h1{
+        margin-top: 120px;
+    }
+}
+
+.banner-image {
+    margin-top: 60px;
+}
+.banner-image img{
+    width: 100%;
+}
+.scalability-image img{
+ width: 100%;
+}
+.banner-image{
+top: 0;
+right: 0;
+
+}
+.header-content p{
+    font-size: 1.8vh;
+    font-weight: normal;
+    color: white;
+}
+.header-content .contact-us-button{
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #7CD5E6;
+    padding: 23px 53px;
+    background: none;
+    color: #7CD5E6;
+    margin-top: 30px;
+}
+.header-content .contact-us-button a{
+   color: #7CD5E6;
+}
+.trading-spot{
+padding-top: 80px;
+justify-content: center;
+}
+.padding-icon {
+    padding: 10px;
+    width: 70px;
+}
+.trading-spot-section-content p{
+    color: #8794a9;
+    font-size: 25px;
+    letter-spacing: 0.768px;;
+}
+.trading-spot-section-content h2{
+    padding-top: 40px;
+
+}
+.scalability{
+    margin-top: 100px;
+}
+section.token{
+    padding-top: 30px;
+}
+section.token-distribution {
+    margin-top: 100px;
+}
+.small-logo {
+    width: 200px;
+    margin-bottom: 30px;
+}
+.trading-spot-section{
+}
+.video-section{
+}
+.footer-section{
+    min-height: 550px;
+}
+.social-icons a{
+    font-size: 2.25rem;
+    padding: 4px;
+}
+.social-icon-bg{
+    display: inline-block;
+    border-radius: 50px;
+    padding: 5px 15px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background:linear-gradient(rgba(51,0,102,0.1),rgba(0,12,64,0.7));
+    /* background-image: url('assets/images/social-icon-bg-2.png');
+} */
+
+}
+.trading-spot-section-item{
+    min-height: 176px;
+    border: 1px solid #41506b;
+    border-radius: 15px;
+    box-shadow: 0px 1px 15px rgb(65 80 107 / 0.5);
+}
+.row-1{
+    display: flex;
+    align-items: center;
+}
+.row-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row-1 p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 21px;
+    font-weight: 600;
+    color: white;
+}
+.dollar{
+    font-size: 29px;
+    font-weight: 500;
+    padding-left: 15px;
+}
+.chg{
+    color: white;
+}
+.price-chg-tittle,
+.price-vol-tittle{
+    font-size: 15px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.trading-spot .col-xl-4{
+    flex: 0 0 30% !important;
+}
+
+.price-chg-value{
+    color: #ff008a;
+    font-size: 15px;
+    font-weight: 400;
+}
+.price-VOL-value{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+.trading-spot-section-item{
+    padding-top: 14px;
+    padding-bottom: 39px;
+    background-color: rgba(5, 14, 57, .3);
+    /* background-color: #050e39; */
+
+}
+.you-tube-video iframe {
+    margin-top: 100px;
+    width: 60%;
+    height: 80%;
+}
+.after-video{
+margin-top: -700px;
+left: 0;
+z-index: -2;
+ /* transform: translate(-50% , -50%);
+  -webkit-transform: translate(-50%, -50%); */
+}
+.after-video img{
+    width: 100%;
+}
+.after-video-2{
+    top: 0px;
+    right: -16px;
+    z-index: -2; 
+}
+.before-video-2{
+    bottom: 1500px;
+    left: -16px;
+    z-index: -2; 
+}
+.you-tube-video>img{
+    width: 80%;
+}
+.section-heading {
+    font-size: 3vh;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.section-content {
+    font-size: 1.5vh;
+    color: white;
+    margin-top: 40px;
+}
+@media (max-width: 992px) {
+    .section-heading, .section-content, .scalability-content{
+        text-align: center;
+    }
+}
+.footer-logo {
+    width: 150px;
+    margin-top: 190px;
+    margin-bottom: 50px;
+}
