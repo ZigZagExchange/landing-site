@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="zh-Hans" class="">
     <head>
         <meta charset="utf-8" />
-        <title>ZigZag Exchange</title>
+        <title>之字形交易所</title>
         <script>
             if (localStorage.getItem("dark-mode") == "true" || !("dark-mode" in localStorage)) {
                 document.querySelector("html").classList.add("dark");
@@ -11,8 +11,8 @@
             }
         </script>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-        <link href="style.css" rel="stylesheet" />
+		<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link href="../style.css" rel="stylesheet" />
     </head>
 
     <body class="font-inter antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 tracking-tight">
@@ -21,8 +21,8 @@
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="flex items-center justify-between h-20">
                         <div class="flex-shrink-0 mr-5">
-                            <a class="block" href="/" aria-label="ZigZag Exchange">
-                                <img class="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src="images/logo.png" width="100" height="128" alt="logo" aria-hidden="true" />
+                            <a class="block" href="/cn" aria-label="ZigZag Exchange">
+                                <img class="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src="../images/logo.png" width="100" height="128" alt="logo" aria-hidden="true" />
                             </a>
                         </div>
                         <nav class="hidden md:flex md:flex-grow">
@@ -33,7 +33,7 @@
                                         href="https://zigzag-exchange.gitbook.io"
                                         target="_blank"
                                     >
-                                        Docs
+                                        文档
                                     </a>
                                 </li>
                                 <li>
@@ -42,12 +42,12 @@
                                         href="https://blog.zigzag.exchange"
                                         target="_blank"
                                     >
-                                        Blog
+                                        博客
                                     </a>
                                 </li>
-                                <li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#roadmap">Roadmap</a></li>
-                                <li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#contact">Contact</a></li>
-								<li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="/cn">中文</a></li>
+                                <li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#roadmap">路线图</a></li>
+                                <li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#contact">接触</a></li>
+								<li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="../">EN</a></li>
                             </ul>
                             <div class="form-switch focus-within:outline-blue flex flex-col justify-center ml-3">
                                 <input type="checkbox" name="light-switch" id="light-switch-desktop" class="light-switch sr-only" />
@@ -63,7 +63,7 @@
                                             <circle fill-opacity=".88" cx="12" cy="12" r="3" />
                                         </g>
                                     </svg>
-                                    <span class="sr-only">Switch to light / dark version</span>
+                                    <span class="sr-only">切換到亮/暗版本</span>
                                 </label>
                             </div>
                             <ul class="flex mb-4 md:order-2 md:ml-4 md:mb-0 flex justify-end flex-wrap items-center">
@@ -126,8 +126,9 @@
                                         </svg>
                                     </a>
                                 </li>
-								<li><a class="btn-sm text-white bg-blue-500 hover:bg-blue-400 ml-6" href="https://trade.zigzag.exchange/">Start Trading</a></li>
+                                <li><a class="btn-sm text-white bg-blue-500 hover:bg-blue-400 ml-6" href="https://trade.zigzag.exchange/">开始交易</a></li>
                             </ul>
+							
                         </nav>
                         <div class="inline-flex md:hidden" x-data="{ expanded: false }">
                             <div class="form-switch focus-within:outline-blue flex flex-col justify-center mr-6 -mt-0.5">
@@ -144,11 +145,11 @@
                                             <circle fill-opacity=".88" cx="12" cy="12" r="3" />
                                         </g>
                                     </svg>
-                                    <span class="sr-only">Switch to light / dark version</span>
+                                    <span class="sr-only">切換到亮/暗版本</span>
                                 </label>
                             </div>
                             <button class="hamburger" :class="{ 'active': expanded }" @click.stop="expanded = !expanded" aria-controls="mobile-nav" :aria-expanded="expanded">
-                                <span class="sr-only">Menu</span>
+                                <span class="sr-only">菜單</span>
                                 <svg class="w-6 h-6 fill-current text-gray-900 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <rect y="4" width="24" height="2" rx="1" />
                                     <rect y="11" width="24" height="2" rx="1" />
@@ -170,7 +171,7 @@
                                 x-cloak
                             >
                                 <div class="py-6 pr-4 pl-20">
-                                    <img class="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src="images/logo.png" width="100" height="128" alt="logo" aria-hidden="true" />
+                                    <img class="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src="../images/logo.png" width="100" height="128" alt="logo" aria-hidden="true" />
                                     <ul>
                                         <li>
                                             <a
@@ -178,7 +179,7 @@
                                                 href="https://zigzag-exchange.gitbook.io"
                                                 target="_blank"
                                             >
-                                                Docs
+                                                文档
                                             </a>
                                         </li>
                                         <li>
@@ -187,13 +188,12 @@
                                                 href="https://blog.zigzag.exchange"
                                                 target="_blank"
                                             >
-                                                Blog
+                                                博客
                                             </a>
                                         </li>
-                                        <li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#roadmap">Roadmap</a></li>
-                                        <li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#contact">Contact</a></li>
-										<li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="/cn">中文</a></li>
-                                        <li><a class="btn-sm text-white bg-blue-500 hover:bg-blue-400 ml-6" href="https://trade.zigzag.exchange/">Start Trading</a></li>
+                                        <li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#roadmap">路线图</a></li>
+                                        <li><a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="../">EN</a></li>
+                                        <li><a class="btn-sm text-white bg-blue-500 hover:bg-blue-400 ml-6" href="https://trade.zigzag.exchange/">开始交易</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -220,16 +220,16 @@
                 </div>
                 <section>
                     <div class="absolute inset-0 h-128 pt-16 box-content -z-1">
-                        <img class="absolute inset-0 w-full h-full object-cover opacity-25" src="images/gif.gif" width="1920" height="577" alt="Background" />
+                        <img class="absolute inset-0 w-full h-full object-cover opacity-25" src="../images/gif.gif" width="1920" height="577" alt="Background" />
                         <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
                     </div>
                     <div class="max-w-6xl mx-auto px-4 sm:px-6">
                         <div class="pt-32 pb-10 md:pt-40 md:pb-16">
                             <div class="md:grid md:grid-cols-12 md:gap-12 lg:gap-20 items-center">
                                 <div class="md:col-span-7 lg:col-span-7 mb-8 md:mb-0 text-center md:text-left">
-                                    <h1 class="h1 lg:text-6x2 mb-4 font-red-hat-display font-extrabold" data-aos="fade-down">A Decentralized Exchange Powered by Zero-Knowledge Technology</h1>
+                                    <h1 class="h1 lg:text-6x2 mb-4 font-red-hat-display font-extrabold" data-aos="fade-down">零知识技术驱动的去中心化交易所</h1>
                                     <p class="text-xl text-gray-600 dark:text-gray-400" data-aos="fade-down" data-aos-delay="250">
-                                        ZigZag is a native, easy-to-use, reliable, fully secure and low fee Decentralized Exchange built on ZK Rollups.
+                                        ZigZag是一种基于ZK Rollups的原生、易于使用、可靠、完全安全和低费用的去中心化交易所
                                     </p>
                                 </div>
                                 <div class="md:col-span-5 lg:col-span-5 text-center md:text-right" x-data="{ modalExpanded: false }" data-aos="fade-up" data-aos-delay="450">
@@ -248,7 +248,7 @@
                                                 </radialGradient>
                                             </defs>
                                         </svg>
-                                        <img class="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src="images/app.png" width="850" height="674" alt="" aria-hidden="true" />
+                                        <img class="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src="../images/app.png" width="850" height="674" alt="" aria-hidden="true" />
                                     </div>
                                     <div
                                         class="fixed inset-0 z-50 bg-black bg-opacity-75 transition-opacity"
@@ -294,8 +294,8 @@
                                     data-aos-anchor="[data-aos-id-featbl]"
                                     data-aos-delay="300"
                                 >
-                                    <div class="font-red-hat-display text-xl font-extrabold tracking-tighter mb-1">ETH L2 DEX - Beta</div>
-                                    <div class="flex-grow opacity-80 mb-4">The ZigZag platform offers decentralized trading with negligible fees.</div>
+                                    <div class="font-red-hat-display text-xl font-extrabold tracking-tighter mb-1">ETH L2 DEX-测试版 </div>
+                                    <div class="flex-grow opacity-80 mb-4">ZigZag 平台提供去中心化交易，费用可忽略不计。</div>
                                     <svg class="w-6 h-6 self-end transform -translate-x-2 group-hover:translate-x-0 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path class="fill-current" d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z" />
                                     </svg>
@@ -307,9 +307,9 @@
                                     data-aos="fade-down"
                                     data-aos-anchor="[data-aos-id-featbl]"
                                 >
-                                    <div class="font-red-hat-display text-xl font-extrabold tracking-tighter mb-1">StarkNet - Alpha</div>
+                                    <div class="font-red-hat-display text-xl font-extrabold tracking-tighter mb-1">StarkNet-阿尔法</div>
                                     <div class="flex-grow opacity-80 mb-4">
-                                        ZigZag will launch on Ethereum's L2 StarkNet. StarkNet's vision brings massive scalability to Ethereum, while preserving L1 security, permissionless transactions and decentralization.
+                                        ZigZag 将在以太坊的L2 StarkNet上启动。StarkNet的愿景为以太坊带来了巨大的可扩展性，同时保留了L1安全性，免许可证交易和去中心化。
                                     </div>
                                     <svg class="w-6 h-6 self-end transform -translate-x-2 group-hover:translate-x-0 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path class="fill-current" d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z" />
@@ -323,9 +323,9 @@
                                     data-aos-anchor="[data-aos-id-featbl]"
                                     data-aos-delay="100"
                                 >
-                                    <div class="font-red-hat-display text-xl font-extrabold tracking-tighter mb-1">zkSync</div>
+                                    <div class="font-red-hat-display text-xl font-extrabold tracking-tighter mb-1">同步</div>
                                     <div class="flex-grow opacity-80 mb-4">
-                                        ZigZag launched on zkSync 1.0. zkSync is an L2 scaling and privacy engine on Ethereum. Its current functionality scope includes low gas transfers on the ZigZag DEX for ~$1 per swap.
+                                        ZigZag 在zkSync1.0上启动，zkSync是以太坊上的L2扩展和隐私引擎，其当前的功能范围包括ZigZag DEX上的低气体转移，每次交换约1美元。
                                     </div>
                                     <svg class="w-6 h-6 self-end transform -translate-x-2 group-hover:translate-x-0 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path class="fill-current" d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z" />
@@ -337,8 +337,8 @@
                                     data-aos-anchor="[data-aos-id-featbl]"
                                     data-aos-delay="200"
                                 >
-                                    <div class="font-red-hat-display text-xl font-extrabold tracking-tighter mb-1">Reward Token</div>
-                                    <div class="flex-grow opacity-80 mb-4">ZigZag's token is a native protocol token and aggregates all fees paid into the ZigZag protocol.</div>
+                                    <div class="font-red-hat-display text-xl font-extrabold tracking-tighter mb-1">奖励代币</div>
+                                    <div class="flex-grow opacity-80 mb-4">ZigZag的代币是一种原生协议代币，它汇总了支付给ZigZag协议的所有费用</div>
                                     <svg class="w-6 h-6 self-end transform -translate-x-2 group-hover:translate-x-0 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path class="fill-current" d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z" />
                                     </svg>
@@ -351,50 +351,48 @@
                     <div class="max-w-6xl mx-auto px-4 sm:px-6">
                         <div class="py-12 md:py-20 border-t border-gray-800">
                             <div class="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-                                <h1 class="h2 mb-4">Main Features</h1>
-                                <p class="text-xl text-gray-400">ZigZag's main features consist of the following three strengths.</p>
+                                <h1 class="h2 mb-4">主要特点</h1>
+                                <p class="text-xl text-gray-400">ZigZag 的主要特点包括以下三个优势</p>
                             </div>
                             <div class="grid gap-20">
                                 <div class="md:grid md:grid-cols-12 md:gap-6 items-center">
                                     <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" data-aos="fade-up">
-                                        <img class="max-w-full mx-auto md:max-w-none h-auto" src="images/feature1.png" width="540" height="405" alt="Features 01" />
+                                        <img class="max-w-full mx-auto md:max-w-none h-auto" src="../images/feature1.png" width="540" height="405" alt="Features 01" />
                                     </div>
                                     <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                                         <div class="md:pr-4 lg:pr-12 xl:pr-16">
-                                            <div class="h3 mb-3">ZK Rollups</div>
+                                            <div class="h3 mb-3">零知识汇总</div>
                                             <p class="text-xl text-gray-400 mb-4">
-                                                ZigZag focuses purely on Zero-Knowledge technology by building on ZK Rollups. ZK Rollups are the end-game Layer 2 solution to the congested Ethereum mainnet.
+                                                ZigZag 通过建立在ZK Rollups上，完全专注于零知识技术，ZK Rollups是拥塞的以太坊主网最终游戏的第2层解决方案
                                             </p>
                                             <p class="text-xl text-gray-400 mb-4">
-                                                These ZK Rollups will bundle transactions on the Layer 2 leading to quicker transaction speeds and negligible fees, whilst freeing up space on the mainnet.
+                                                这些ZK Rollups将在第2层上捆绑交易，从而实现更快的交易速度和可忽略的费用，同时释放主网上的空间
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-12 md:gap-6 items-center">
                                     <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:rtl" data-aos="fade-up">
-                                        <img class="max-w-full mx-auto md:max-w-none h-auto" src="images/feature2.png" width="540" height="405" alt="Features 02" />
+                                        <img class="max-w-full mx-auto md:max-w-none h-auto" src="../images/feature2.png" width="540" height="405" alt="Features 02" />
                                     </div>
                                     <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                                         <div class="md:pr-4 lg:pr-12 xl:pr-16">
-                                            <div class="h3 mb-3">Decentralized Orderbook</div>
+                                            <div class="h3 mb-3">去中心化订单簿</div>
                                             <p class="text-xl text-gray-400 mb-4">
-                                                In a highly liquid market an orderbook is our choice of option compared to an AMM since scalability is a resolved issue with ZK Rollups. Furthermore, ZigZag's orderbook is decentralized
-                                                allowing for users to trade in an instant, without a registration, whilst keeping control over their funds.
+                                                在流动性高的市场中，与AMM相比，订单薄是我们的选择，因为可扩展性是ZK Rollups已解决的问题。此外，ZigZag的订单薄是去中心化的，允许用户无需注册即可即时交易，同时保持对其资金的控制
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-12 md:gap-6 items-center">
                                     <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" data-aos="fade-up">
-                                        <img class="max-w-full mx-auto md:max-w-none h-auto" src="images/feature3.png" width="540" height="405" alt="Features 03" />
+                                        <img class="max-w-full mx-auto md:max-w-none h-auto" src="../images/feature3.png" width="540" height="405" alt="Features 03" />
                                     </div>
                                     <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                                         <div class="md:pr-4 lg:pr-12 xl:pr-16">
-                                            <div class="h3 mb-3">Bottomless Liquidity</div>
+                                            <div class="h3 mb-3">无底的流动性</div>
                                             <p class="text-xl text-gray-400 mb-4">
-                                                With the support of top market makers in the crypto space, ZigZag provides bottomless liquidity. ZigZag guarantees that the liquidity is sufficient for any trader no matter their size, with
-                                                minimal slippage and fees.
+                                                在加密领域顶级做市商的支持下，ZigZag提供了无限的流动性。ZigZag保证流动性对于任何交易者来说都是足够的，无论他们的规模大小，滑点和费用最低。
                                             </p>
                                         </div>
                                     </div>
@@ -407,8 +405,8 @@
                     <div class="max-w-6xl mx-auto px-4 sm:px-6">
                         <div class="py-12 md:py-20 border-t border-gray-200 dark:border-gray-800">
                             <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                                <h2 class="h2 font-red-hat-display mb-4">ROADMAP</h2>
-                                <p class="text-xl text-gray-600 dark:text-gray-400">ZigZag's milestones and vision for the future</p>
+                                <h2 class="h2 font-red-hat-display mb-4">路线图</h2>
+                                <p class="text-xl text-gray-600 dark:text-gray-400">ZigZag的里程碑和未来愿景</p>
                             </div>
                             <div x-data="{ year: 'Q421' }">
                                 <div class="flex items-start">
@@ -434,107 +432,107 @@
                                     <div class="flex-grow" x-show="year === 'Q321'">
                                         <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
                                             <article class="md:col-span-2 p-6 bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>September 2021</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>09/2021</span></a>
                                                 <header>
-                                                    <h3 class="h4 font-red-hat-display text-white mb-1"><a href="#0">Project founded</a></h3>
+                                                    <h3 class="h4 font-red-hat-display text-white mb-1"><a href="#0">项目成立</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>ZigZag idea materialized</p></div>
+                                                <div class="text-white flex-grow"><p>之字折线的想法实现了</p></div>
                                             </article>
                                         </div>
                                     </div>
                                     <div class="flex-grow" x-show="year === 'Q421'">
                                         <div class="grid md:grid-cols-2 gap-6">
                                             <article class="p-6 bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>October 2021</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>10/2021</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">$100k Grant</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">10万美元赠款</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>First funding raised by $100k grant</p></div>
+                                                <div class="text-white flex-grow"><p>10万美元赠款筹集的第一笔资金</p></div>
                                             </article>
                                             <article class="p-6 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:to-indigo-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>October 2021</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>10/2021</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Launch</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">發射</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>Launch on zkSync 1.0 with initial pairs (ETH/USDT, ETH/USDC, USDC/USDT)</p></div>
+                                                <div class="text-white flex-grow"><p>在zkSync1.0上发布初始对（ETH/USDT、ETH/USDC、USDC/USDT）</p></div>
                                             </article>
                                             <article class="p-6 bg-gradient-to-tr from-pink-500 to-pink-400 dark:to-pink-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>November 2021</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>11/2021</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Assemble founding team</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">组建创始团队</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>“If you want to go fast, go alone. If you want to go far, go together.”</p></div>
+                                                <div class="text-white flex-grow"><p>“如果你想走得快，就一个人走；想走得远，就一起走”</p></div>
                                             </article>
                                             <article class="p-6 bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>November 2021</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>11/2021</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Raise liquidity</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">提高流动性</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>Further raising of funds for development & pair liquidity</p></div>
+                                                <div class="text-white flex-grow"><p>进一步筹集资金用于开发和配对流动性</p></div>
                                             </article>
                                             <article class="p-6 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:to-indigo-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>November 2021</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>11/2021</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Launch on StarkNet</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">在StarkNet上发布</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>ZigZag will launch on Ethereum's L2 StarkNet.</p></div>
+                                                <div class="text-white flex-grow"><p>ZigZag将在以太坊的L2 StarkNet上启动</p></div>
                                             </article>
                                             <article class="p-6 bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>November 2021</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>11/2021</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Argent Wallet</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">銀色錢包</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>ZigZag supports the Argent wallet</p></div>
+                                                <div class="text-white flex-grow"><p>ZigZag 支持 Argent 錢包</p></div>
                                             </article>
                                             <article class="p-6 bg-gradient-to-tr from-pink-500 to-pink-400 dark:to-pink-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>December 2021</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>12/2021</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Scale up with developers</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">与开发人员一起扩展</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>Expand core development team</p></div>
+                                                <div class="text-white flex-grow"><p>扩大核心开发团队</p></div>
                                             </article>
                                         </div>
                                     </div>
                                     <div class="flex-grow" x-show="year === 'Q122'">
                                         <div class="grid md:grid-cols-2 gap-6">
                                             <article class="md:col-span-2 p-6 bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>January 2022</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>01/2022</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Liquidity pools</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">流動資金池</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>Users will be able to provide liquidity through liquidity pools on StarkNet and zkSync 2.0</p></div>
+                                                <div class="text-white flex-grow"><p>用戶將能夠通過 StarkNet 和 zkSync 2.0 上的流動性池提供流動性</p></div>
                                             </article>
                                             <article class="p-6 bg-gradient-to-tr from-pink-500 to-pink-400 dark:to-pink-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>January 2022</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>01/2022</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Launch on zkSync 2.0</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">在zkSync2.0上启动</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>ZigZag launches on zkSync 2.0</p></div>
+                                                <div class="text-white flex-grow"><p>ZigZag在zkSync2.0上启动</p></div>
                                             </article>
                                             <article class="p-6 bg-gradient-to-tr from-blue-500 to-blue-400 dark:to-blue-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>Quarter 4 - 2021 | Quarter 1 - 2022</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>第4季度-2021|2022年第1季度</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">New trading pairs</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">新交易对</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>Implement new trading pairs (WBTC-USDC, WBTC-USDT, ETH/WBTC)</p></div>
+                                                <div class="text-white flex-grow"><p>实施新的交易对（WBTC-USDC、WBTC-USDT、ETH/WBTC)</p></div>
                                             </article>
                                             <article class="p-6 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:to-indigo-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>Quarter 1 - 2022</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>01/2022</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Implement WalletConnect</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">實施 WalletConnect</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>Users will be able to connect to ZigZag through WalletConnect</p></div>
+                                                <div class="text-white flex-grow"><p>用戶將能夠通過 WalletConnect 連接到 ZigZag</p></div>
                                             </article>
                                         </div>
                                     </div>
                                     <div class="flex-grow" x-show="year === 'Q222'">
                                         <div class="grid md:grid-cols-2 gap-6">
                                             <article class="md:col-span-2 p-6 bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 shadow-2xl flex flex-col rounded-md">
-                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>Quarter 2 - 2022</span></a>
+                                                <a class="inline-flex items-center font-medium text-white hover:underline mt-2"><span>2022年第2季度</span></a>
                                                 <header>
-                                                    <h3 class="h4 text-white mb-1"><a href="#0">Margin Trading</a></h3>
+                                                    <h3 class="h4 text-white mb-1"><a href="#0">保证金交易</a></h3>
                                                 </header>
-                                                <div class="text-white flex-grow"><p>Implement margin trading</p></div>
+                                                <div class="text-white flex-grow"><p>实施保证金交易</p></div>
                                             </article>
                                         </div>
                                     </div>
@@ -547,33 +545,33 @@
                     <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
                         <div class="pt-32 pb-12 md:pt-40 md:pb-20">
                             <div class="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-                                <h1 class="h1 font-red-hat-display mb-4">Jobs & Collaborations</h1>
-                                <p class="text-xl text-gray-600 dark:text-gray-400">We're looking for talented developers, designers and crypto marketing geniuses.</p>
-                                <p class="text-xl text-gray-600 dark:text-gray-400">Contact with us via email.</p>
+                                <h1 class="h1 font-red-hat-display mb-4">工作与合作</h1>
+                                <p class="text-xl text-gray-600 dark:text-gray-400">我们正在寻找有才华的开发人员、设计师和加密营销天才</p>
+                                <p class="text-xl text-gray-600 dark:text-gray-400">通过电子邮件与我们联系</p>
                             </div>
                             <form class="max-w-xl mx-auto" action="https://formspree.io/f/mdoyqrkw" method="POST">
                                 <div class="flex flex-wrap -mx-3 mb-5">
                                     <div class="w-full px-3">
-                                        <label class="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" for="name">Name <span class="text-red-600">*</span></label>
-                                        <input id="name" name="user_name" class="form-input w-full" placeholder="Enter your name" required />
+                                        <label class="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" for="name">姓名 <span class="text-red-600">*</span></label>
+                                        <input id="name" name="user_name" class="form-input w-full" placeholder="输入您的名字" required />
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap -mx-3 mb-5">
                                     <div class="w-full px-3">
-                                        <label class="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" for="mail">E-mail <span class="text-red-600">*</span></label>
-                                        <input type="email" id="email" name="user_mail" class="form-input w-full" placeholder="Enter your email address" required />
+                                        <label class="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" for="mail">电子邮件 <span class="text-red-600">*</span></label>
+                                        <input type="email" id="email" name="user_mail" class="form-input w-full" placeholder="输入您的电子邮件地址" required />
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap -mx-3 mb-5">
                                     <div class="w-full px-3">
-                                        <label class="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" for="subject">Subject <span class="text-red-600">*</span></label>
-                                        <input id="subject" name="subject" class="form-input w-full" placeholder="Enter your subject" />
+                                        <label class="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" for="subject">主题 <span class="text-red-600">*</span></label>
+                                        <input id="subject" name="subject" class="form-input w-full" placeholder="输入您的主题" />
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap -mx-3 mb-5">
                                     <div class="w-full px-3">
                                         <div class="flex justify-between items-center mb-1">
-                                            <label class="block text-gray-800 dark:text-gray-300 text-sm font-medium" for="message" required>Message <span class="text-red-600">*</span></label> <span class="text-sm text-gray-500"></span>
+                                            <label class="block text-gray-800 dark:text-gray-300 text-sm font-medium" for="message" required>留言 <span class="text-red-600">*</span></label> <span class="text-sm text-gray-500"></span>
                                         </div>
                                         <textarea id="msg" name="user_message" rows="11" class="form-textarea w-full" required></textarea>
                                     </div>
@@ -581,7 +579,7 @@
                                 <div class="flex flex-wrap -mx-3 mt-6">
                                     <div class="w-full px-3">
                                         <button type="submit" class="btn text-white bg-blue-500 hover:bg-blue-400 w-full flex items-center">
-                                            <span>Send</span>
+                                            <span>发送</span>
                                             <svg class="w-3 h-3 flex-shrink-0 mt-px ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                                 <path class="fill-current" d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
                                             </svg>
@@ -666,12 +664,12 @@
                                     </a>
                                 </li>
                             </ul>
-                            <div class="text-gray-600 dark:text-gray-400 text-sm mr-4">&copy; 2021 ZIGZAG. All rights reserved.</div>
+                            <div class="text-gray-600 dark:text-gray-400 text-sm mr-4">&copy; 2021 之字形 版权所有</div>
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
-        <script src="main.js"></script>
+        <script src="../main.js"></script>
     </body>
 </html>
