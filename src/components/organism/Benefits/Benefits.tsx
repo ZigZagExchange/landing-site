@@ -75,17 +75,10 @@ const Benefits = () => {
   };
   return (
     <section className="text-center h-96">
-      <p
-        data-aos="fade-up"
-        className="mx-8 mt-32 text-4xl font-semibold tracking-wider text-center md:mx-4 md:text-5xl md:mt-0"
-      >
+      <p className="mx-8 mt-32 text-4xl font-semibold tracking-wider text-center md:mx-4 md:text-5xl md:mt-0">
         Benefits and Features
       </p>
-      <div
-        data-aos="fade-up"
-        data-aos-delay="600"
-        className="mt-16 xl:ml-40 lg:ml-0"
-      >
+      <div className="mt-16 xl:ml-40 lg:ml-0">
         <Slider {...settings}>
           {data.map((item, index) => {
             return <BenefitItem data={item} key={index} />;

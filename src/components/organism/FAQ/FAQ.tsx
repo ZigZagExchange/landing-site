@@ -52,40 +52,23 @@ const FAQ: NextPage = () => {
       )}
     >
       <div className="xl:basis-1/3 lg:basis-2/5">
-        <p
-          data-aos="fade-up"
-          className="text-4xl font-semibold tracking-wider text-left md:text-5xl"
-        >
+        <p className="text-4xl font-semibold tracking-wider text-left md:text-5xl">
           {t("FAQ")}
         </p>
-        <p
-          data-aos="fade-up"
-          data-aos-delay="600"
-          className="mt-4 text-base font-light leading-6 tracking-wider text-left md:text-xl"
-        >
+        <p className="mt-4 text-base font-light leading-6 tracking-wider text-left md:text-xl">
           <Trans
             t={t}
             i18nKey="faqdescription"
             components={{ 1: <a href="#" /> }}
           />
         </p>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-delay="1200"
-          data-aos-duration="1200"
-        >
+        <div>
           <Button className="px-6 py-2 mt-5 text-base font-bold uppercase border border-gray-500 rounded-lg dark:text-foreground-900 text-background-50 hover:opacity-75 font-work">
             {t("View THE Docs")}
           </Button>
         </div>
       </div>
-      <div
-        data-aos="fade-left"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        data-aos-delay="0"
-        className="xl:basis-2/5 lg:basis-3/5 lg:mt-0 md:mt-12"
-      >
+      <div className="xl:basis-2/5 lg:basis-3/5 lg:mt-0 md:mt-12">
         {data.map((item, index) => {
           return (
             <Disclosure key={index}>

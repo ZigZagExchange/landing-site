@@ -19,15 +19,15 @@ const StepThree = ({ className }: any) => {
       <p className="mt-2 text-base font-light leading-6 tracking-wider text-left font-work">
         {t("Start trading!")}
       </p>
-      <div className="mt-4 text-left">
-        <Image
+      <div className="mt-4 text-left bg-[url('/assets/chart.png')] h-52 bg-cover bg-no-repeat">
+        {/* <Image
           src="/assets/chart.png"
           alt="swap"
           width="100%"
           height="50%"
           layout="responsive"
           objectFit="cover"
-        />
+        /> */}
       </div>
     </div>
   );

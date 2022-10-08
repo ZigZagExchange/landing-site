@@ -92,7 +92,7 @@ const PriceCard = ({ className, symbol, name, fillColor }: priceCardProps) => {
         styles.priceCard,
         theme === "dark" ? clsNames : clsLightNames,
         className,
-        "flex items-center relative md:w-56 md:h-48 w-100 h-48"
+        "flex items-center relative md:w-56 md:h-48 w-100 h-48 rounded-xl shadow-2xl"
       )}
     >
       <div className="absolute flex items-center gap-3 top-4 left-4">

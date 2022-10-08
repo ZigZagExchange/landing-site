@@ -6,10 +6,6 @@ import styles from "./roadMapItem.module.css";
 const RoadMapItem = ({ data }: any) => {
   return (
     <div
-      data-aos="flip-up"
-      data-aos-delay="1800"
-      data-aos-duration="1000"
-      data-aos-anchor=".other-element"
       className={classNames(
         styles.roadMapItem,
         "text-left border rounded-2xl border-foreground-400 p-5 bg-foreground-100 shadow-xl backdrop-blur-md"

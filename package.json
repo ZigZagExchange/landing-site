@@ -40,6 +40,7 @@
     "react-player": "^2.10.0",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
+    "tailwindcss-border-gradient-radius": "^3.0.1",
     "victory": "^36.3.1",
     "yup": "^0.32.11"
   },

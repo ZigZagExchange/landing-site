@@ -29,7 +29,7 @@ const StepOne = ({ className }: any) => {
         <Button className="mx-8 text-xs font-bold uppercase" type="gradient">
           {t("Start Trading")}
         </Button>
-        <ArrowNarrowDownIcon className="w-5 h-5 my-4" aria-hidden="true" />
+        <ArrowNarrowDownIcon className="w-5 h-5 my-2" aria-hidden="true" />
         <Button className="mx-8 text-xs font-bold uppercase" type="gradient">
           {t("connect wallet")}
         </Button>
