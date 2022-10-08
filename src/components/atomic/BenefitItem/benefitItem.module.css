@@ -1,0 +1,18 @@
+.benefitItem {
+    width: 296px;
+    height: 246px;
+    /* background: rgba(7, 7, 28, 0.1); */
+    background: rgba(42, 171, 238, 0.19);
+    /* Foreground[dark]/400 */
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 16px;
+    background-position: center center;
+    background-size: cover;
+}
+

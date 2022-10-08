@@ -1,0 +1,14 @@
+.button {
+    background: linear-gradient(93.46deg, #2AABEE 16.94%, #0CCFCF 97.24%);
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08), 0px 3px 3px -1px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+.button:hover {
+    background: linear-gradient(93.46deg, rgba(42, 171, 238, 0.19) 16.94%, rgba(12, 207, 207, 0.19) 97.24%);
+    /* Shadows/2 */
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08), 0px 3px 3px -1px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}

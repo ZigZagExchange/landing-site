@@ -1,0 +1,72 @@
+.root {
+  /* background: #ffffff; */
+  position: relative;
+}
+
+.root:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/assets/blurred-ellipses--top.png'), url('../../public/assets/blurred-ellipses--bottom.png');
+  background-position: top -15% center, right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: blur(5rem);
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 1440px) {
+  .root:before {
+   background-position: top -10% center, right bottom;
+   opacity: 0.8;
+  }
+ }
+
+ @media only screen and (max-width: 1024px) {
+  .root:before {
+   background-position: top -10% center, right bottom;
+   background-size: 110%, 250%;
+   opacity: 0.8;
+  }
+ }
+
+@media only screen and (max-width: 768px) {
+ .root:before {
+  background-position: top -10% center, right bottom;
+  background-size: 150%, 250%;
+  opacity: 0.8;
+ }
+}
+@media only screen and (max-width: 600px) {
+  .root:before {
+   background-position: top 0% center, right bottom;
+   background-size: 200%, 300%;
+   opacity: 0.5;
+  }
+ }
+ 
+
+.dList {
+  @apply mt-4;
+}
+
+.dList dt {
+  @apply text-lg font-medium leading-8 sm:font-semibold;
+}
+
+.dList dd {
+  @apply indent-xs sm:indent-sm;
+}
+
+:global(.dark) .root {
+  background-color: #191A33;
+}
+
+.imageWrapper > span {
+  top: -250px !important;
+}
+
+.imagebottomWrapper > span {
+  bottom: 0px !important;
+}

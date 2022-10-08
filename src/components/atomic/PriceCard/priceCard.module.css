@@ -1,0 +1,56 @@
+.priceCard {
+    /* z-index: -1000; */
+    background-size: 18px 18px, calc(100% - 36px) 2px, 18px 18px, 2px calc(100% - 36px);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+}
+
+.priceCardBTC {
+    border: none;
+    background-image: radial-gradient(circle at 100% 100%, transparent 16px, rgba(247, 147, 26, 0.48) 16px, rgba(247, 147, 26, 0.48) 18px, transparent 18px), 
+    linear-gradient(to right, rgba(247, 147, 26, 0.48), rgba(245, 252, 255, 0.12),rgba(247, 147, 26, 0.48)), 
+    radial-gradient(circle at 0% 100%, transparent 16px, rgba(247, 147, 26, 0.48) 16px, rgba(247, 147, 26, 0.48) 18px, transparent 18px), 
+    linear-gradient(to bottom, rgba(247, 147, 26, 0.48), rgba(245, 252, 255, 0.12)), 
+    radial-gradient(circle at 0% 0%, transparent 16px, rgba(245, 252, 255, 0.12) 16px, rgba(245, 252, 255, 0.12) 18px, transparent 18px), 
+    linear-gradient(to left, rgba(245, 252, 255, 0.12), rgba(245, 252, 255, 0.12)), 
+    radial-gradient(circle at 100% 0%, transparent 16px, rgba(245, 252, 255, 0.12) 16px, rgba(245, 252, 255, 0.12) 18px, transparent 18px), 
+    linear-gradient(to top, rgba(245, 252, 255, 0.12), rgba(247, 147, 26, 0.48));
+}
+
+.priceCardMatic {
+    background-image: radial-gradient(circle at 100% 100%, transparent 16px, rgba(130, 71, 229, 0.6) 16px, rgba(130, 71, 229, 0.6) 18px, transparent 18px), 
+    linear-gradient(to right, rgba(130, 71, 229, 0.6), rgba(245, 252, 255, 0.15),rgba(130, 71, 229, 0.6)), 
+    radial-gradient(circle at 0% 100%, transparent 16px, rgba(130, 71, 229, 0.6) 16px, rgba(130, 71, 229, 0.6) 18px, transparent 18px), 
+    linear-gradient(to bottom, rgba(130, 71, 229, 0.6), rgba(245, 252, 255, 0.15)), 
+    radial-gradient(circle at 0% 0%, transparent 16px, rgba(245, 252, 255, 0.15) 16px, rgba(245, 252, 255, 0.15) 18px, transparent 18px), 
+    linear-gradient(to left, rgba(245, 252, 255, 0.15), rgba(245, 252, 255, 0.15)), 
+    radial-gradient(circle at 100% 0%, transparent 16px, rgba(245, 252, 255, 0.15) 16px, rgba(245, 252, 255, 0.15) 18px, transparent 18px), 
+    linear-gradient(to top, rgba(245, 252, 255, 0.15), rgba(130, 71, 229, 0.6));
+}
+
+.priceCardETH {
+    background-image: radial-gradient(circle at 100% 100%, transparent 16px, rgba(98, 126, 234, 0.6) 16px, rgba(98, 126, 234, 0.6) 18px, transparent 18px), 
+    linear-gradient(to right, rgba(98, 126, 234, 0.6), rgba(245, 252, 255, 0.15),rgba(98, 126, 234, 0.6)), 
+    radial-gradient(circle at 0% 100%, transparent 16px, rgba(98, 126, 234, 0.6) 16px, rgba(98, 126, 234, 0.6) 18px, transparent 18px), 
+    linear-gradient(to bottom, rgba(98, 126, 234, 0.6), rgba(245, 252, 255, 0.15)), 
+    radial-gradient(circle at 0% 0%, transparent 16px, rgba(245, 252, 255, 0.15) 16px, rgba(245, 252, 255, 0.15) 18px, transparent 18px), 
+    linear-gradient(to left, rgba(245, 252, 255, 0.15), rgba(245, 252, 255, 0.15)), 
+    radial-gradient(circle at 100% 0%, transparent 16px, rgba(245, 252, 255, 0.15) 16px, rgba(245, 252, 255, 0.15) 18px, transparent 18px), 
+    linear-gradient(to top, rgba(245, 252, 255, 0.15), rgba(98, 126, 234, 0.6));
+}
+
+.priceLightCardBTC {
+    border: 1px solid #F7931A;
+    border-radius: 18px;
+}
+
+.priceLightCardMatic {
+    border: 1px solid #8247E5;
+    border-radius: 18px;
+}
+
+.priceLightCardETH {
+    border: 1px solid #627EEA;
+    border-radius: 18px;
+}
+
