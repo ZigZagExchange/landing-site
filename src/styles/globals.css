@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 @import "animate.css/animate.min.css";
@@ -28,22 +28,21 @@ a[href]:not([hidden]):not(.unstyled-a) {
 
 .dark body {
   color: aliceblue;
-  background-color: #07071C;
+  background-color: #07071c;
 }
 
 .slick-slide {
   width: auto !important;
 }
 
-body{
+body {
   overflow: auto;
   @apply bg-primary-500;
-
 }
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
@@ -76,31 +75,30 @@ main {
 
 @media only screen and (max-width: 1440px) {
   main:after {
-   background-position: right -10% bottom;
-   opacity: 0.8;
+    background-position: right -10% bottom;
+    opacity: 0.8;
   }
- }
+}
 
- @media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   main:before {
-   background-position: right -10% bottom;
-   background-size: 110%;
-   opacity: 0.8;
+    background-position: right -10% bottom;
+    background-size: 110%;
+    opacity: 0.8;
   }
- }
+}
 
 @media only screen and (max-width: 768px) {
- main:before {
-  background-position: right -10% bottom;
-  background-size: 150%;
-  opacity: 0.8;
- }
+  main:before {
+    background-position: right -10% bottom;
+    background-size: 150%;
+    opacity: 0.8;
+  }
 }
 @media only screen and (max-width: 600px) {
   main:before {
-   background-position: right 0% bottom;
-   background-size: 200%;
-   opacity: 0.5;
+    background-position: right 0% bottom;
+    background-size: 200%;
+    opacity: 0.5;
   }
- }
-
+}

@@ -6,3 +6,4 @@ export const GLOSSARY_TNS = "glossary";
 export const HELLO_TNS = "hello";
 export const GETSTARTED_TNS = "getstarted";
 export const FAQ_TNS = "faq";
+export const NEWS_TNS = "news";

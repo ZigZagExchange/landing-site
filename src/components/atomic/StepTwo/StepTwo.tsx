@@ -19,15 +19,15 @@ const StepTwo = ({ className }: any) => {
       <p className="mt-2 text-base font-light leading-6 tracking-wider text-left font-work">
         {t("Migrate funds over via the ZigZag bridge.")}
       </p>
-      <div className="mt-4 text-left">
-        <Image
+      <div className="mt-4 text-left bg-[url('/assets/swap.png')] h-44 bg-cover bg-no-repeat">
+        {/* <Image
           src="/assets/swap.png"
           alt="swap"
           width="100%"
-          height="50%"
+          height="80%"
           layout="responsive"
           objectFit="contain"
-        />
+        /> */}
       </div>
     </div>
   );

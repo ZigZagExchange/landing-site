@@ -23,7 +23,7 @@ const BenefitItem = ({ data }: BenefitItemProps) => {
     <div
       className={classNames(
         styles.benefitItem,
-        "flex items-start justify-center mx-4 duration-300 ease-in bg-gradient-to-r from-primary-600 to-secondary-600"
+        "duration-300 ease-in bg-gradient-to-r from-primary-600 to-secondary-600 h-72"
       )}
       style={
         !over
@@ -33,11 +33,11 @@ const BenefitItem = ({ data }: BenefitItemProps) => {
           : {}
       }
     >
-      <p className="absolute text-base font-semibold top-4 left-5 font-work">
+      <p className="p-4 text-base font-semibold text-left font-work">
         {data.title}
       </p>
       {over && (
-        <p className="p-5 text-xs font-normal leading-5 tracking-wider text-left duration-300 ease-out font-work pt-14 ">
+        <p className="p-4 pt-3 text-base font-normal leading-5 tracking-wider text-left duration-300 ease-out font-work ">
           {data.text}
         </p>
       )}

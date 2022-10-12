@@ -47,28 +47,14 @@ const RoadMap = () => {
         "text-center relative mt-48 mb-16 mx-8 md:mx-0"
       )}
     >
-      <p
-        data-aos="fade-up"
-        className="z-20 text-4xl font-semibold tracking-wider text-center md:text-5xl"
-      >
+      <p className="z-20 text-4xl font-semibold tracking-wider text-center md:text-5xl">
         Our Roadmap
       </p>
-      <p
-        data-aos="fade-up"
-        data-aos-delay="600"
-        className="mt-4 text-xl font-light tracking-wider text-center "
-      >
+      <p className="mt-4 text-xl font-light tracking-wider text-center ">
         {t("ZigZag’s milestones and vision for the future")}
       </p>
       <div className="flex flex-row mt-16 lg:ml-40 md:mx-16 lg:justify-start md:justify-between">
-        <div
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-          data-aos-delay="1200"
-          data-aos-duration="2000"
-          className="text-left md:basis-1/4 basis-1/3"
-        >
+        <div className="text-left md:basis-1/4 basis-1/3">
           <div className="flex items-start">
             <p className="-mt-1.5 text-xl font-light tracking-wider font-work">
               Q3-21

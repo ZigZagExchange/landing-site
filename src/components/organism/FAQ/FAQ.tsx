@@ -29,63 +29,31 @@ const data = [
     description:
       "To start using ZigZag, you will first have to connect your Web3 wallet to our application. You’ll then have to bridge funds over and activate your zkSync account, this includes a one-time transaction of roughly ~10$. To do so head over to ZigZag Bridge or zkSync bridge.",
   },
-  {
-    title: "What is a Nonce Mismatch?",
-    description:
-      "Occasionally a ‘nonce mismatch’ error can come up when placing an order, resulting in a rejected order. This does not result in deducted gas or trading fees. Simply place the order again.",
-  },
-  {
-    title: "Why is a trading pair is not loading?",
-    description:
-      "If your trading pairs are not loading/visible, simply refresh the page. This issue may occur if you’re not able to connect to the backend.",
-  },
 ];
 
 const FAQ: NextPage = () => {
   const { t } = useTranslation([FAQ_TNS]);
 
   return (
-    <section
-      className={classNames(
-        styles.faq,
-        "lg:flex lg:flex-row md:mx-16 xl:gap-48 lg:gap-20 mt-48 relative xl:ml-40 xl:mr-0 lg:mx-12 z-1 mx-8"
-      )}
-    >
-      <div className="xl:basis-1/3 lg:basis-2/5">
-        <p
-          data-aos="fade-up"
-          className="text-4xl font-semibold tracking-wider text-left md:text-5xl"
-        >
+    <section className={classNames(styles.faq, "grid grid-cols-5 gap-4 mt-52")}>
+      <div className="col-start-1 col-end-3">
+        <p className="text-4xl font-semibold tracking-wider text-left md:text-5xl">
           {t("FAQ")}
         </p>
-        <p
-          data-aos="fade-up"
-          data-aos-delay="600"
-          className="mt-4 text-base font-light leading-6 tracking-wider text-left md:text-xl"
-        >
+        <p className="mt-4 text-base font-light leading-6 tracking-wider text-left md:text-xl">
           <Trans
             t={t}
             i18nKey="faqdescription"
             components={{ 1: <a href="#" /> }}
           />
         </p>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-delay="1200"
-          data-aos-duration="1200"
-        >
+        <div>
           <Button className="px-6 py-2 mt-5 text-base font-bold uppercase border border-gray-500 rounded-lg dark:text-foreground-900 text-background-50 hover:opacity-75 font-work">
             {t("View THE Docs")}
           </Button>
         </div>
       </div>
-      <div
-        data-aos="fade-left"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        data-aos-delay="0"
-        className="xl:basis-2/5 lg:basis-3/5 lg:mt-0 md:mt-12"
-      >
+      <div className="col-span-2 col-end-6">
         {data.map((item, index) => {
           return (
             <Disclosure key={index}>

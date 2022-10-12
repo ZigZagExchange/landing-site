@@ -3,6 +3,7 @@ import FAQ from "@/components/organism/FAQ/FAQ";
 import AOS from "aos";
 import GetStarted from "@/components/organism/GetStarted/GetStarted";
 import RoadMap from "@/components/organism/RoadMap/RoadMap";
+import News from "@/components/organism/News/News";
 import { Header } from "@/components/organism/Header/Header";
 import Footer from "@/components/organism/Footer/Footer";
 import Hello from "@/components/organism/Hello/Hello";
@@ -13,6 +14,7 @@ import {
   HELLO_TNS,
   FAQ_TNS,
   GETSTARTED_TNS,
+  NEWS_TNS,
 } from "@/lib/i18n/consts";
 import { GetStaticProps, NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -32,6 +34,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
         COMMON_TNS,
         HELLO_TNS,
         FAQ_TNS,
+        NEWS_TNS,
       ])),
       // Will be passed to the page component as props
     },
@@ -61,14 +64,15 @@ const Homepage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main>
+      <main className="container mx-auto">
         <Hello />
         <Benefits />
         <GetStarted />
         <FAQ />
-        <RoadMap />
-        <Footer />
+        <News />
+        {/* <RoadMap /> */}
       </main>
+      <Footer />
     </div>
   );
 };
