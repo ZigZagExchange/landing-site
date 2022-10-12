@@ -13,14 +13,14 @@ import "aos/dist/aos.css";
 const GetStarted = () => {
   const { t, i18n } = useTranslation([GETSTARTED_TNS]);
   return (
-    <section className={"mt-48 mx-8 md:mx-0"}>
+    <section className={"mt-48 md:mx-0"}>
       <p className="text-4xl font-semibold tracking-wider text-center md:text-5xl">
         {t("Getting Started is Easy")}
       </p>
       <p className="mt-4 text-base font-light tracking-wider text-center md:text-xl ">
         {t("Trading on L2 has never been easier.")}
       </p>
-      <div className="mt-16 xl:ml-40 xl:mr-0 xl:gap-6 lg:mx-8 md:mx-16 xl:flex xl:flex-row">
+      <div className="mt-16 xl:mr-0 xl:gap-6 xl:flex xl:flex-row">
         <div className="xl:items-center xl:justify-center xl:basis-1/4 xl:block lg:flex lg:justify-betweem lg:items-center lg:gap-5">
           <div className="basis-1/3">
             <StepOne />
@@ -69,7 +69,7 @@ const GetStarted = () => {
           <div
             className={classNames(
               styles.tradingUI,
-              "xl:border xl:border-foreground-400 flex justify-center align-center"
+              "xl:border xl:border-foreground-400 flex justify-center align-center rounded-3xl"
             )}
           >
             <YoutubeModal />

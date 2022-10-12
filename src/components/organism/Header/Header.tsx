@@ -90,11 +90,11 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 height={32}
               />
             </Link>
-            <Dropdown
+            {/* <Dropdown
               btnText={t("fiat")}
               options={fiatOptions}
               className="hidden lg:ml-4 xl:ml-7 lg:block"
-            />
+            /> */}
             <Dropdown
               btnText={"Support"}
               options={supportOptions}
@@ -112,11 +112,11 @@ export const Header: React.FC<HeaderProps> = (props) => {
             >
               Contact
             </LinkText>
-            <Dropdown
+            {/* <Dropdown
               btnText={"ZigZag Labs"}
               options={labsOptions}
               className="hidden lg:ml-0 xl:ml-7 lg:block"
-            />
+            /> */}
             <div className="lg:hidden ml-7">
               <MobileDropdown options={mobileOptions} />
             </div>
@@ -136,7 +136,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 size={18}
               />
             </div>
-            <div className="flex items-center ml-6 lg:border-l lg:border-gray-500">
+            <div className="flex items-center ml-6 mr-4 lg:border-l lg:border-gray-500">
               <Listbox value={selected} onChange={handleSelectLang}>
                 <div className="relative">
                   <Listbox.Button className="relative w-full py-1 pl-3 pr-8 ml-2 text-left bg-transparent rounded-lg cursor-pointer">
@@ -197,7 +197,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                   </Transition>
                 </div>
               </Listbox>
-              <div className="px-4">
+              {/* <div className="px-4">
                 {theme === "dark" ? (
                   <SunIcon
                     className="w-5 h-5 text-white cursor-pointer"
@@ -209,7 +209,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                     onClick={switchTheme}
                   />
                 )}
-              </div>
+              </div> */}
             </div>
 
             <div className="border-l border-gray-500">

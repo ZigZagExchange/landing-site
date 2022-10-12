@@ -43,11 +43,7 @@ const Hello = () => {
       </div>
 
       <div className="absolute hidden bottom-18 2xl:left-44 xl:left-36 xl:block">
-        <PriceCard
-          symbol="Terra (LUNA)"
-          name="terra-luna"
-          fillColor="#8247E5"
-        />
+        <PriceCard symbol="ZigZag" name="zigzag-2" fillColor="#8247E5" />
       </div>
 
       <div className="absolute hidden top-52 2xl:right-44 xl:right-16 xl:block">
@@ -56,11 +52,7 @@ const Hello = () => {
 
       <div className="flex flex-col items-center justify-around gap-8 mt-16 md:gap-0 md:flex-row xl:hidden">
         <PriceCard symbol="BTC" name="bitcoin" fillColor="#F7931A" />
-        <PriceCard
-          symbol="Terra (LUNA)"
-          name="terra-luna"
-          fillColor="#8247E5"
-        />
+        <PriceCard symbol="ZigZag" name="zigzag-2" fillColor="#8247E5" />
         <PriceCard symbol="ETH" name="ethereum" fillColor="#627EEA" />
       </div>
     </section>

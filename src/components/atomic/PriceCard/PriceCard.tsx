@@ -18,16 +18,16 @@ const PriceCard = ({ className, symbol, name, fillColor }: priceCardProps) => {
   const [data, setData] = useState<any>();
   const [priceData, setPriceData] = useState();
   const { theme } = useTheme();
-
+  console.log(theme);
   let clsNames = cx({
     priceCardBTC: symbol === "BTC",
-    priceCardMatic: symbol === "Terra (LUNA)",
+    priceCardMatic: symbol === "ZigZag",
     priceCardETH: symbol === "ETH",
   });
 
   let clsLightNames = cx({
     priceLightCardBTC: symbol === "BTC",
-    priceLightCardMatic: symbol === "Terra (LUNA)",
+    priceLightCardMatic: symbol === "ZigZag",
     priceLightCardETH: symbol === "ETH",
   });
 
@@ -90,7 +90,8 @@ const PriceCard = ({ className, symbol, name, fillColor }: priceCardProps) => {
     <div
       className={classNames(
         styles.priceCard,
-        theme === "dark" ? clsNames : clsLightNames,
+        // theme === "dark" ? clsNames : clsLightNames,
+        clsNames,
         className,
         "flex items-center relative md:w-56 md:h-48 w-100 h-48 rounded-xl shadow-2xl"
       )}
