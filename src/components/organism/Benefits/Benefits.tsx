@@ -9,7 +9,7 @@ import fast_withdrawl from "../../../../public/assets/fast-withdrawl.svg";
 
 const data = [
   {
-    title: "unparalleled Quotes & Deep Liquidity",
+    title: "Unparalleled Quotes & Deep Liquidity",
     bg: unparalled_quotes,
     text: "We offer extremely low slippage for trades of all sizes, quotes that compete with ones offered by centralized exchanges",
   },

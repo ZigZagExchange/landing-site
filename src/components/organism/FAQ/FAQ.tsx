@@ -40,7 +40,7 @@ const FAQ: NextPage = () => {
         <p className="text-4xl font-semibold tracking-wider text-left md:text-5xl">
           {t("FAQ")}
         </p>
-        <p className="mt-4 text-base font-light leading-6 tracking-wider text-left md:text-xl">
+        <p className="mt-8 text-lg font-light leading-8 tracking-wide text-left font-work text-foreground-800">
           <Trans
             t={t}
             i18nKey="faqdescription"
@@ -48,7 +48,7 @@ const FAQ: NextPage = () => {
           />
         </p>
         <div>
-          <Button className="px-6 py-2 mt-5 text-base font-bold uppercase border border-gray-500 rounded-lg dark:text-foreground-900 text-background-50 hover:opacity-75 font-work">
+          <Button className="px-6 py-2 mt-8 text-base font-semibold uppercase border-2 rounded-lg dark:border-foreground-700 font-work dark:text-foreground-800 text-background-50 hover:dark:text-foreground-900 hover:dark:border-foreground-900">
             {t("View THE Docs")}
           </Button>
         </div>
@@ -58,8 +58,8 @@ const FAQ: NextPage = () => {
           return (
             <Disclosure key={index}>
               {({ open }) => (
-                <div className="mt-5 text-left border rounded-2xl dark:border-foreground-400 border-background-600">
-                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-2xl font-normal text-left font-work">
+                <div className="mt-5 text-left border-2 rounded-2xl border-foreground-800 hover:border-foreground-900">
+                  <Disclosure.Button className="flex items-center justify-between w-full text-foreground-800 px-5 py-5 text-xl !font-normal text-left font-work hover:text-foreground-900">
                     {item.title}
                     {open ? (
                       <MinusIcon
@@ -82,7 +82,7 @@ const FAQ: NextPage = () => {
                     leaveFrom="transform scale-100 opacity-100"
                     leaveTo="transform scale-95 opacity-0"
                   >
-                    <Disclosure.Panel className="px-5 pb-3 text-base leading-6 tracking-wider">
+                    <Disclosure.Panel className="px-5 pb-3 text-base leading-6 tracking-wider ">
                       {item.description}
                     </Disclosure.Panel>
                   </Transition>

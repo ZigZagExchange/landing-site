@@ -44,7 +44,7 @@ const News = () => {
       <p className="text-4xl font-semibold tracking-wider text-center md:text-5xl">
         {t("newsandupdates")}
       </p>
-      <div className="grid grid-cols-3 gap-10 mt-16 mb-44">
+      <div className="grid grid-cols-3 gap-10 mt-16">
         {data &&
           data?.item.slice(0, 3).map((item: any, index: any) => {
             return <BlogItem data={item} {...data.profile} key={index} />;

@@ -15,7 +15,7 @@ const BlogItem = ({ data, ...props }: any) => {
 
   return (
     <>
-      <div className="flex flex-col col-span-1 rounded-lg shadow-lg bg-gradient-to-r from-primary-600 to-secondary-600">
+      <div className="relative flex flex-col col-span-1 rounded-lg shadow-lg bg-gradient-to-r from-primary-600 to-secondary-600">
         <div
           className="relative h-64 bg-no-repeat bg-cover rounded-tl-lg rounded-tr-lg"
           style={{ backgroundImage: `url(${data.thumbnail})` }}
@@ -36,14 +36,14 @@ const BlogItem = ({ data, ...props }: any) => {
           </div>
           <a
             href={data.link}
-            className="mt-4 text-2xl font-work"
+            className="mt-4 text-2xl !font-semibold font-work"
             rel="noopener noreferrer"
             target="_blank"
           >
             {data.title}
           </a>
 
-          <p className="mt-4 mb-10">{`${ToText(
+          <p className="mt-4 mb-10 font-normal font-work text-foreground-800">{`${ToText(
             data.description.substring(0, 500)
           )}...`}</p>
 

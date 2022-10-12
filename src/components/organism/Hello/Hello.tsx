@@ -20,7 +20,7 @@ const Hello = () => {
         {t("Join the Future of Trading")}
       </p>
 
-      <p className="mx-12 text-base font-light leading-normal tracking-widest text-center whitespace-pre-wrap lg:mt-6 dark:text-gray-400 md:mt-0 md:mx-0 font-work">
+      <p className="mx-12 text-base font-light leading-normal tracking-wider text-center whitespace-pre-wrap lg:mt-6 dark:text-foreground-800 md:mt-0 md:mx-0 font-work">
         {t(
           "Zigzag is a native, easy-to-use, reliable, fully secure and low fee Decentralized Exchange built on ZK Rollups."
         )}
@@ -33,7 +33,7 @@ const Hello = () => {
         >
           {t("Start Trading")}
         </Button>
-        <Button className="px-8 py-2 text-base font-bold uppercase border border-gray-500 rounded-lg hover:opacity-75 font-work dark:text-foreground-900 text-background-900">
+        <Button className="px-8 py-2 text-base font-bold uppercase border-2 rounded-lg dark:border-foreground-800 font-work dark:text-foreground-800 hover:dark:border-foreground-900 hover:dark:text-foreground-900">
           {t("What Are ZK Rollups?")}
         </Button>
       </div>

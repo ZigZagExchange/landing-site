@@ -84,9 +84,9 @@ export const Header: React.FC<HeaderProps> = (props) => {
           <div className="flex items-center ">
             <Link href="/" passHref={true}>
               <Image
-                src="/assets/logo.svg"
+                src="/assets/logo.png"
                 alt="Vercel Logo"
-                width={25}
+                width={100}
                 height={32}
               />
             </Link>

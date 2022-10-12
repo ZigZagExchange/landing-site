@@ -71,8 +71,8 @@ const Homepage: NextPage = () => {
         <FAQ />
         <News />
         {/* <RoadMap /> */}
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 };
