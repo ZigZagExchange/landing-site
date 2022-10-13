@@ -22,9 +22,12 @@ const FAQ = React.forwardRef<any, props>(
     return (
       <section
         ref={ref}
-        className={classNames(styles.faq, "grid grid-cols-5 gap-4 mt-52")}
+        className={classNames(
+          styles.faq,
+          "grid md:grid-cols-5 lg:gap-4 md:gap-0 mt-52 md:px-8 grid-cols-1"
+        )}
       >
-        <div className="col-start-1 col-end-3">
+        <div className="md:col-start-1 md:col-end-3">
           <p className="text-4xl font-semibold tracking-wider text-left md:text-5xl">
             {t("FAQ")}
           </p>
@@ -50,7 +53,7 @@ const FAQ = React.forwardRef<any, props>(
             </Button>
           </div>
         </div>
-        <div className="col-span-2 col-end-6">
+        <div className="col-span-2 md:col-end-6">
           <Disclosure>
             {({ open }) => (
               <div className="mt-5 text-left border-2 rounded-2xl border-foreground-800 hover:border-foreground-900">

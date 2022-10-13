@@ -13,8 +13,8 @@ import "aos/dist/aos.css";
 const GetStarted = () => {
   const { t, i18n } = useTranslation([GETSTARTED_TNS]);
   return (
-    <section className={"mt-48 md:mx-0"}>
-      <p className="text-4xl font-semibold tracking-wider text-center font-work md:text-5xl">
+    <section className={"mt-48 md:px-8"}>
+      <p className="text-5xl font-semibold leading-relaxed text-center md:tracking-wider font-work">
         {t("Getting Started is Easy")}
       </p>
       <p className="mt-4 text-xl !font-light font-work tracking-wide text-center text-foreground-800">
@@ -26,15 +26,15 @@ const GetStarted = () => {
             <StepOne />
           </div>
 
-          {/* <div className="flex items-center justify-center my-2 ">
+          <div className="flex items-center justify-center my-2 lg:hidden ">
             <Image
               src="/assets/gradient-arrow-narrow-down.svg"
               width={20}
               height={20}
               alt="narrow-down"
             />
-          </div> */}
-          <div className="flex items-center justify-center my-2">
+          </div>
+          <div className="items-center justify-center hidden my-2 lg:flex">
             <Image
               src="/assets/gradient-arrow-narrow-right.svg"
               width={20}
@@ -45,15 +45,15 @@ const GetStarted = () => {
           <div className="basis-1/3">
             <StepTwo />
           </div>
-          {/* <div className="flex items-center justify-center my-2 lg:hidden xl:flex">
+          <div className="flex items-center justify-center my-2 lg:hidden">
             <Image
               src="/assets/gradient-arrow-narrow-down.svg"
               width={20}
               height={20}
               alt="narrow-down"
             />
-          </div> */}
-          <div className="items-center justify-center my-2 ">
+          </div>
+          <div className="items-center justify-center hidden my-2 lg:flex ">
             <Image
               src="/assets/gradient-arrow-narrow-right.svg"
               width={20}

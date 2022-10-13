@@ -99,14 +99,14 @@ const content = [
 
 const Footer = () => {
   return (
-    <div>
+    <div className="md:px-8">
       <div
         className={classNames(
           styles.footer,
-          "grid grid-cols-6 mt-44 gap-16 pb-16  border-b-2 border-foreground-400"
+          "grid md:grid-cols-3 grid-cols-1 mt-44 lg:gap-16 gap-10 pb-16  border-b-2 border-foreground-400 "
         )}
       >
-        <div className="col-span-2">
+        <div>
           <Link href="/" passHref={true}>
             <Image
               src="/assets/logo.png"
@@ -154,26 +154,30 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        {content.map((data: any, idx: any) => {
-          return (
-            <div className="flex flex-col gap-4" key={idx}>
-              <p className="text-base font-medium font-work">{data.category}</p>
-              {data.items.map((item: any, index: any) => {
-                return (
-                  <a
-                    href={item.url}
-                    className=" text-base !font-light font-work text-foreground-800"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    key={index}
-                  >
-                    {item.name}
-                  </a>
-                );
-              })}
-            </div>
-          );
-        })}
+        <div className="grid grid-cols-2 col-span-2 gap-5 lg:grid-cols-4">
+          {content.map((data: any, idx: any) => {
+            return (
+              <div className="flex flex-col gap-4 md:ml-10 lg:ml-0" key={idx}>
+                <p className="text-base font-medium font-work">
+                  {data.category}
+                </p>
+                {data.items.map((item: any, index: any) => {
+                  return (
+                    <a
+                      href={item.url}
+                      className=" text-base !font-light font-work text-foreground-800"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      key={index}
+                    >
+                      {item.name}
+                    </a>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div className="py-10 text-center">
         <p className="font-normal font-work text-foreground-800">

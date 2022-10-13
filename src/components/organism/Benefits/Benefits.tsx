@@ -44,11 +44,11 @@ const Benefits = () => {
     variableWidth: true,
   };
   return (
-    <section className="text-center h-96">
-      <p className="mt-32 text-4xl font-semibold tracking-wider text-center md:mx-4 md:text-5xl md:mt-0">
+    <section className="text-center">
+      <p className="mt-32 text-5xl font-semibold tracking-wider text-center md:mx-4 md:mt-0">
         Benefits and Features
       </p>
-      <div className="grid grid-cols-4 gap-10 mt-16">
+      <div className="grid gap-5 mt-16 md:px-8 lg:grid-cols-4 md:grid-cols-2 xl:gap-10 ">
         {data.map((item, index) => {
           return <BenefitItem data={item} key={index} />;
         })}

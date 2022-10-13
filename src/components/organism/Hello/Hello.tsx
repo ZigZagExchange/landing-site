@@ -20,11 +20,11 @@ const Hello = ({ onClickRollupBtn }: props) => {
 
   return (
     <section className={classNames(styles.hello, "relative")}>
-      <p className="pt-32 text-4xl font-semibold leading-tight text-center whitespace-pre-wrap xl:pt-52 lg:text-7xl md:text-5xl font-work ">
+      <p className="pt-32 text-4xl font-semibold leading-tight text-center whitespace-pre-wrap xl:pt-52 md:text-6xl font-work ">
         {t("Join the Future of Trading")}
       </p>
 
-      <p className="mx-12 text-base font-light leading-normal tracking-wider text-center whitespace-pre-wrap lg:mt-6 dark:text-foreground-800 md:mt-0 md:mx-0 font-work">
+      <p className="mx-12 text-base font-light leading-normal tracking-wider text-center whitespace-pre-wrap md:mt-6 dark:text-foreground-800 md:mx-0 font-work">
         {t(
           "Zigzag is a native, easy-to-use, reliable, fully secure and low fee Decentralized Exchange built on ZK Rollups."
         )}
@@ -65,7 +65,13 @@ const Hello = ({ onClickRollupBtn }: props) => {
 
       <div className="flex flex-col items-center justify-around gap-8 mt-16 md:gap-0 md:flex-row xl:hidden">
         <PriceCard symbol="BTC" name="bitcoin" fillColor="#F7931A" />
-        <PriceCard symbol="ZigZag" name="zigzag-2" fillColor="#8247E5" />
+        <PriceCard
+          symbol="ZZ"
+          name="zigzag-2"
+          title="ZigZag"
+          logo="/assets/logo.svg"
+          fillColor="#8247E5"
+        />
         <PriceCard symbol="ETH" name="ethereum" fillColor="#627EEA" />
       </div>
     </section>

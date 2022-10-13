@@ -40,11 +40,11 @@ const News = () => {
   }, []);
 
   return (
-    <section className={"mt-48"}>
+    <section className={"mt-48 md:px-8"}>
       <p className="text-4xl font-semibold tracking-wider text-center md:text-5xl">
         {t("newsandupdates")}
       </p>
-      <div className="grid grid-cols-3 gap-10 mt-16">
+      <div className="grid gap-5 mt-16 lg:grid-cols-3 md:grid-cols-1 xl:gap-10">
         {data &&
           data?.item.slice(0, 3).map((item: any, index: any) => {
             return <BlogItem data={item} {...data.profile} key={index} />;

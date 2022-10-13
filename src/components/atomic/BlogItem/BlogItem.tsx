@@ -44,7 +44,7 @@ const BlogItem = ({ data, ...props }: any) => {
           </a>
 
           <p className="mt-4 mb-10 font-normal font-work text-foreground-800">{`${ToText(
-            data.description.substring(0, 500)
+            data.description.substring(0, 300)
           )}...`}</p>
 
           <span className="absolute flex items-center gap-2 text-sm text-gray-300 bottom-5">
