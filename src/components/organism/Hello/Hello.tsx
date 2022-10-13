@@ -11,12 +11,16 @@ import classNames from "classnames";
 
 import styles from "./hello.module.css";
 
-const Hello = () => {
+type props = {
+  onClickRollupBtn?: () => void;
+};
+
+const Hello = ({ onClickRollupBtn }: props) => {
   const { t, i18n } = useTranslation([HELLO_TNS, COMMON_TNS]);
 
   return (
     <section className={classNames(styles.hello, "relative")}>
-      <p className="pt-32 text-4xl font-semibold leading-tight text-center whitespace-pre-wrap xl:pt-52 lg:text-7xl md:text-5xl xs:font-work ">
+      <p className="pt-32 text-4xl font-semibold leading-tight text-center whitespace-pre-wrap xl:pt-52 lg:text-7xl md:text-5xl font-work ">
         {t("Join the Future of Trading")}
       </p>
 
@@ -28,12 +32,15 @@ const Hello = () => {
 
       <div className="flex flex-col justify-center gap-4 mx-16 mt-8 text-center md:mx-0 md:flex-row">
         <Button
-          className="px-8 py-2 text-base font-bold uppercase font-work md:w-100"
+          className="px-8 py-2 text-base font-semibold uppercase font-work md:w-100"
           type="gradient"
         >
           {t("Start Trading")}
         </Button>
-        <Button className="px-8 py-2 text-base font-bold uppercase border-2 rounded-lg dark:border-foreground-800 font-work dark:text-foreground-800 hover:dark:border-foreground-900 hover:dark:text-foreground-900">
+        <Button
+          className="px-8 py-2 text-base font-semibold uppercase border-2 rounded-lg dark:border-foreground-800 font-work dark:text-foreground-800 hover:dark:border-foreground-900 hover:dark:text-foreground-900"
+          onClick={onClickRollupBtn}
+        >
           {t("What Are ZK Rollups?")}
         </Button>
       </div>
@@ -43,7 +50,13 @@ const Hello = () => {
       </div>
 
       <div className="absolute hidden bottom-18 2xl:left-44 xl:left-36 xl:block">
-        <PriceCard symbol="ZigZag" name="zigzag-2" fillColor="#8247E5" />
+        <PriceCard
+          symbol="ZZ"
+          name="zigzag-2"
+          title="ZigZag"
+          logo="/assets/logo.svg"
+          fillColor="#8247E5"
+        />
       </div>
 
       <div className="absolute hidden top-52 2xl:right-44 xl:right-16 xl:block">

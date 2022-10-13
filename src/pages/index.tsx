@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import Benefits from "@/components/organism/Benefits/Benefits";
 import FAQ from "@/components/organism/FAQ/FAQ";
 import AOS from "aos";
@@ -21,7 +23,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import { useTranslation } from "react-i18next";
 import styles from "./index.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const { locale } = ctx;
@@ -42,8 +44,10 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 const Homepage: NextPage = () => {
-  const { t } = useTranslation([PAGES_TNS], { keyPrefix: "index" });
-  const { t: gt } = useTranslation([GLOSSARY_TNS]);
+  // const { t } = useTranslation([PAGES_TNS], { keyPrefix: "index" });
+  // const { t: gt } = useTranslation([GLOSSARY_TNS]);
+  const ref = useRef<null | HTMLDivElement>(null);
+  const [rollup, setRollUp] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -56,6 +60,15 @@ const Homepage: NextPage = () => {
     AOS.refresh();
   }, []);
 
+  const onRollupOpen = () => {
+    setRollUp(!rollup);
+  };
+
+  const onClickRollupBtn = () => {
+    setRollUp(true);
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={"" + " " + styles.root}>
       <Head>
@@ -65,10 +78,14 @@ const Homepage: NextPage = () => {
       </Head>
       <Header />
       <main className="container mx-auto">
-        <Hello />
+        <Hello onClickRollupBtn={onClickRollupBtn} />
         <Benefits />
         <GetStarted />
-        <FAQ />
+        <FAQ
+          ref={ref}
+          setRollupOpen={() => onRollupOpen()}
+          rollupOpen={rollup}
+        />
         <News />
         {/* <RoadMap /> */}
         <Footer />

@@ -9,25 +9,34 @@ type priceCardProps = {
   className?: string;
   symbol: string;
   name: string;
+  title?: string;
   fillColor: string;
+  logo?: string;
 };
 
 let cx = classNames.bind(styles);
 
-const PriceCard = ({ className, symbol, name, fillColor }: priceCardProps) => {
+const PriceCard = ({
+  className,
+  symbol,
+  name,
+  fillColor,
+  title,
+  logo,
+}: priceCardProps) => {
   const [data, setData] = useState<any>();
   const [priceData, setPriceData] = useState();
   const { theme } = useTheme();
   console.log(theme);
   let clsNames = cx({
     priceCardBTC: symbol === "BTC",
-    priceCardMatic: symbol === "ZigZag",
+    priceCardMatic: symbol === "ZZ",
     priceCardETH: symbol === "ETH",
   });
 
   let clsLightNames = cx({
     priceLightCardBTC: symbol === "BTC",
-    priceLightCardMatic: symbol === "ZigZag",
+    priceLightCardMatic: symbol === "ZZ",
     priceLightCardETH: symbol === "ETH",
   });
 
@@ -99,7 +108,7 @@ const PriceCard = ({ className, symbol, name, fillColor }: priceCardProps) => {
       <div className="absolute flex items-center gap-3 top-4 left-4">
         {data && (
           <Image
-            src={data?.image?.large}
+            src={logo ? logo : data?.image?.large}
             alt="Vercel Logo"
             width={32}
             height={32}
@@ -108,7 +117,7 @@ const PriceCard = ({ className, symbol, name, fillColor }: priceCardProps) => {
         <div>
           <p className="text-base font-work font-semiBold">{symbol}</p>
           <p className="text-xs font-normal tracking-wider text-gray-400 capitalize font-work">
-            {name}
+            {title ? title : name}
           </p>
         </div>
       </div>

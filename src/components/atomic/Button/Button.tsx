@@ -7,9 +7,15 @@ type buttonProps = {
   className?: string;
   children: React.ReactNode;
   type?: string;
+  onClick?: () => void;
 };
 
-const Button = ({ className, children, type = "graident" }: buttonProps) => {
+const Button = ({
+  className,
+  children,
+  type = "graident",
+  onClick,
+}: buttonProps) => {
   return (
     <button
       className={classNames(
@@ -17,6 +23,7 @@ const Button = ({ className, children, type = "graident" }: buttonProps) => {
         type === "gradient" && styles.button,
         "px-4 py-2 block text-foreground-900"
       )}
+      onClick={onClick}
     >
       {children}
     </button>

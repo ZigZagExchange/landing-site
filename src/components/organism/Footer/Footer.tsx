@@ -12,15 +12,15 @@ const content = [
     items: [
       {
         name: "Orderbook DEX",
-        url: "",
+        url: "https://trade.zigzag.exchange/",
       },
       {
         name: "Mammoth Pool",
-        url: "",
+        url: "https://mammoth.zigzag.exchange/",
       },
       {
-        name: "zzNFT Marketplace",
-        url: "",
+        name: "ZigZag Labs",
+        url: "https://zigzaglabs.io/",
       },
     ],
   },
@@ -29,23 +29,23 @@ const content = [
     items: [
       {
         name: "Documentation",
-        url: "",
+        url: "https://docs.zigzag.exchange/",
       },
       {
         name: "Uptime Status",
-        url: "",
+        url: "https://status.zigzag.exchange/",
       },
       {
         name: "Github",
-        url: "",
+        url: "https://github.com/ZigZagExchange",
       },
       {
         name: "Blog",
-        url: "",
+        url: "https://blog.zigzag.exchange/",
       },
       {
         name: "zkRollups Ecosystem",
-        url: "",
+        url: "https://zigzaglabs.io/",
       },
     ],
   },
@@ -54,23 +54,23 @@ const content = [
     items: [
       {
         name: "zkSync",
-        url: "",
+        url: "https://zksync.io/",
       },
       {
         name: "StarkNet",
-        url: "",
+        url: "https://starknet.io/",
       },
       {
         name: "Argent",
-        url: "",
+        url: "https://www.argent.xyz/",
       },
       {
         name: "CoinGecko",
-        url: "",
+        url: "https://www.coingecko.com/en/coins/zigzag",
       },
       {
         name: "Coinmarketcap",
-        url: "",
+        url: "https://coinmarketcap.com/currencies/zigzag/",
       },
     ],
   },
@@ -79,19 +79,19 @@ const content = [
     items: [
       {
         name: "Twitter",
-        url: "",
+        url: "https://twitter.com/ZigZagExchange",
       },
       {
         name: "Discord",
-        url: "",
+        url: "https://t.co/yk7f1m0nmE",
       },
       {
         name: "Telegram",
-        url: "",
+        url: "https://t.me/zigzagexchange",
       },
       {
         name: "Forum",
-        url: "",
+        url: "https://forum.zigzaglabs.io/",
       },
     ],
   },
@@ -116,14 +116,42 @@ const Footer = () => {
             />
           </Link>
           <p className="mt-5 font-light leading-8 tracking-wide text-white font-work">
-            ZigZag is a native, easy-to-use, reliable, fully secure and low fee
-            Decentralized Exchange built on ZK Rollups.
+            A decentralized order book exchange powered by zero-knowledge
+            technology.
           </p>
           <div className="flex items-center gap-10 mt-7">
-            <BsTwitter className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
-            <BsGithub className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
-            <BsDiscord className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
-            <BsTelegram className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
+            <a
+              href="https://twitter.com/ZigZagExchange"
+              className=" text-base !font-light font-work text-foreground-800"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <BsTwitter className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
+            </a>
+            <a
+              href="https://github.com/ZigZagExchange"
+              className=" text-base !font-light font-work text-foreground-800"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <BsGithub className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
+            </a>
+            <a
+              href="https://t.co/yk7f1m0nmE"
+              className=" text-base !font-light font-work text-foreground-800"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <BsDiscord className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
+            </a>
+            <a
+              href="https://t.me/zigzagexchange"
+              className=" text-base !font-light font-work text-foreground-800"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <BsTelegram className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
+            </a>
           </div>
         </div>
         {content.map((data: any, idx: any) => {
@@ -133,7 +161,7 @@ const Footer = () => {
               {data.items.map((item: any, index: any) => {
                 return (
                   <a
-                    href="https://trade.zigzag.exchange/"
+                    href={item.url}
                     className=" text-base !font-light font-work text-foreground-800"
                     rel="noopener noreferrer"
                     target="_blank"
