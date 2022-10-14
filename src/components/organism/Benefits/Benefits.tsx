@@ -10,22 +10,22 @@ import fast_withdrawl from "../../../../public/assets/fast-withdrawl.svg";
 const data = [
   {
     title: "Unparalleled Quotes & Deep Liquidity",
-    bg: unparalled_quotes,
+    bgUrl: "bg-[url('/assets/unparalled-quotes.svg')]",
     text: "We offer extremely low slippage for trades of all sizes, quotes that compete with ones offered by centralized exchanges",
   },
   {
     title: "High Scalability",
-    bg: security,
+    bgUrl: "bg-[url('/assets/security.svg')]",
     text: "By using ZK Rollups we are able to offer near-zero swap fees with nearly instantaneous transactions.",
   },
   {
     title: "Decentralized & Secure",
-    bg: fast_withdrawl,
+    bgUrl: "bg-[url('/assets/fast-withdrawl.svg')]",
     text: "ZigZag aims to be fully decentralized and open source.",
   },
   {
     title: "CEX Price Feeds",
-    bg: unparalled_quotes,
+    bgUrl: "bg-[url('/assets/unparalled-quotes.svg')]",
     text: "All price feeds are fetched from centralized exchanges,  always guaranteeing the best price possible.",
   },
 ];

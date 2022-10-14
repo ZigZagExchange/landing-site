@@ -1,7 +1,7 @@
 .benefitItem {
   /* width: 296px; */
   /* background: rgba(7, 7, 28, 0.1); */
-  background: rgba(42, 171, 238, 0.19);
+  background-color: rgba(42, 171, 238, 0.19);
   /* Foreground[dark]/400 */
 
   border: 1px solid rgba(255, 255, 255, 0.13);

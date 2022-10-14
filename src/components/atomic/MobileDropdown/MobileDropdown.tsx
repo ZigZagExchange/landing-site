@@ -3,7 +3,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 import { MenuIcon } from "@heroicons/react/solid";
-import { FaDiscord, FaTwitter, FaTelegram } from "react-icons/fa";
+import { FaDiscord, FaTwitter, FaTelegram, FaGithub } from "react-icons/fa";
 // function classNames(...classes: string[]) {
 //   return classes.filter(Boolean).join(" ");
 // }
@@ -40,44 +40,67 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
               <Menu.Item key={index}>
                 {({ active }) => (
                   <a
-                    href="#"
+                    href={item.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
                     className={classNames(
-                      active ? " text-gray-900" : "text-gray-700",
-                      "flex px-4 py-2 text-sm text-gray-900 items-center"
+                      active ? " " : "",
+                      "flex px-4 py-2 text-sm items-center text-foreground-900 font-work !font-normal"
                     )}
                   >
-                    <div className="flex items-center justify-center p-2 mr-3 border rounded-full border-foreground-400">
-                      <Image
-                        src={item.icon}
-                        alt={item.label}
-                        width={14}
-                        height={14}
-                      />
-                    </div>
                     {item.label}
                   </a>
                 )}
               </Menu.Item>
             );
           })}
-          <div className="h-px mx-4 my-2 bg-foreground-400"></div>
+          <div className="h-px mx-2 my-2 bg-foreground-400"></div>
           <Menu.Item
             key="social"
             as="div"
             className="flex justify-between mx-4 my-4"
           >
-            <FaDiscord
-              className="cursor-pointer text-foreground-900 hover:text-gray-100"
-              size={22}
-            />
-            <FaTwitter
-              className="cursor-pointer text-foreground-900 hover:text-gray-100"
-              size={22}
-            />
-            <FaTelegram
-              className="cursor-pointer text-foreground-900 hover:text-gray-100"
-              size={22}
-            />
+            <a
+              href="https://twitter.com/ZigZagExchange"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaTwitter
+                className="cursor-pointer text-foreground-900 hover:text-gray-100"
+                size={22}
+              />
+            </a>
+            <a
+              href="https://github.com/ZigZagExchange"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaGithub
+                className="cursor-pointer text-foreground-900 hover:text-gray-100"
+                size={22}
+              />
+            </a>
+            <a
+              href="https://t.co/yk7f1m0nmE"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaDiscord
+                className="cursor-pointer text-foreground-900 hover:text-gray-100"
+                size={22}
+              />
+            </a>
+
+            <a
+              href="https://t.me/zigzagexchange"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaTelegram
+                className="cursor-pointer text-foreground-900 hover:text-gray-100"
+                size={22}
+              />
+            </a>
           </Menu.Item>
         </Menu.Items>
       </Transition>

@@ -2,7 +2,7 @@ import { Fragment, useState, useEffect } from "react";
 import { COMMON_TNS } from "@/lib/i18n/consts";
 import LinkText from "@/components/atomic/LinkText/LinkText";
 import { Listbox, Transition } from "@headlessui/react";
-import { FaDiscord, FaTwitter, FaTelegram } from "react-icons/fa";
+import { FaDiscord, FaTwitter, FaTelegram, FaGithub } from "react-icons/fa";
 import {
   MoonIcon,
   SunIcon,
@@ -70,16 +70,19 @@ export const Header: React.FC<HeaderProps> = (props) => {
   ];
 
   const mobileOptions = [
-    { value: "fiat", label: "FIAT", icon: "/assets/dollar.svg" },
-    { value: "docs", label: "Docs", icon: "/assets/docs.svg" },
-    { value: "faq", label: "FAQ", icon: "/assets/faq.svg" },
+    { value: "helpcenter", label: "Help Center", url: "#" },
+    { value: "documents", label: "Documents", url: "#" },
+    { value: "community", label: "Community Support", url: "#" },
+    { value: "governance", label: "Governance", url: "#" },
+    { value: "blog", label: "Blog", url: "#" },
+    { value: "contact", label: "Contact", url: "#" },
   ];
 
   if (!isMounted) return null;
 
   return (
     <>
-      <header className="sticky top-0 left-0 right-0 z-40 flex-none w-full px-4 transition-colors duration-500 backdrop-blur lg:z-50 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
+      <header className="sticky top-0 left-0 right-0 z-40 flex-none w-full px-4 transition-colors duration-500 md:px-8 backdrop-blur lg:z-50 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
         <div className="flex items-center justify-between h-20 m-auto 2xl:max-w-screen-2xl xl:max-w-screen-xl ">
           <div className="flex items-center ">
             <Link href="/" passHref={true}>
@@ -123,18 +126,47 @@ export const Header: React.FC<HeaderProps> = (props) => {
           </div>
           <div className="flex items-center justify-center ">
             <div className="hidden gap-6 lg:flex">
-              <FaDiscord
-                className="cursor-pointer dark:text-gray-400 dark:hover:text-gray-100 hover:text-background-800"
-                size={18}
-              />
-              <FaTwitter
-                className="cursor-pointer dark:text-gray-400 dark:hover:text-gray-100 hover:text-background-800"
-                size={18}
-              />
-              <FaTelegram
-                className="cursor-pointer dark:text-gray-400 dark:hover:text-gray-100 hover:text-background-800"
-                size={18}
-              />
+              <a
+                href="https://twitter.com/ZigZagExchange"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaTwitter
+                  className="cursor-pointer dark:text-gray-400 dark:hover:text-gray-100 hover:text-background-800"
+                  size={18}
+                />
+              </a>
+              <a
+                href="https://github.com/ZigZagExchange"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaGithub
+                  className="cursor-pointer dark:text-gray-400 dark:hover:text-gray-100 hover:text-background-800"
+                  size={18}
+                />
+              </a>
+              <a
+                href="https://t.co/yk7f1m0nmE"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaDiscord
+                  className="cursor-pointer dark:text-gray-400 dark:hover:text-gray-100 hover:text-background-800"
+                  size={18}
+                />{" "}
+              </a>
+
+              <a
+                href="https://t.me/zigzagexchange"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaTelegram
+                  className="cursor-pointer dark:text-gray-400 dark:hover:text-gray-100 hover:text-background-800"
+                  size={18}
+                />
+              </a>
             </div>
             <div className="flex items-center ml-6 mr-4 lg:border-l lg:border-gray-500">
               <Listbox value={selected} onChange={handleSelectLang}>
@@ -213,12 +245,19 @@ export const Header: React.FC<HeaderProps> = (props) => {
             </div>
 
             <div className="border-l border-gray-500">
-              <Button
-                className="ml-8 text-xs font-bold uppercase"
-                type="gradient"
+              <a
+                href="https://trade.zigzag.exchange/"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="!hover:no-underline"
               >
-                Start Trading
-              </Button>
+                <Button
+                  className="ml-8 text-xs font-bold uppercase"
+                  type="gradient"
+                >
+                  Start Trading
+                </Button>
+              </a>
             </div>
           </div>
         </div>

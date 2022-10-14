@@ -21,10 +21,10 @@ body {
   color: black;
   background-color: theme("colors.background.50");
 }
-
+/* 
 a[href]:not([hidden]):not(.unstyled-a) {
   @apply link;
-}
+} */
 
 .dark body {
   color: aliceblue;

@@ -31,12 +31,19 @@ const Hello = ({ onClickRollupBtn }: props) => {
       </p>
 
       <div className="flex flex-col justify-center gap-4 mx-16 mt-8 text-center md:mx-0 md:flex-row">
-        <Button
-          className="px-8 py-2 text-base font-semibold uppercase font-work md:w-100"
-          type="gradient"
+        <a
+          href="https://trade.zigzag.exchange/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="!hover:no-underline"
         >
-          {t("Start Trading")}
-        </Button>
+          <Button
+            className="px-8 py-2.5 text-base font-semibold uppercase font-work md:w-100 hover:no-underline"
+            type="gradient"
+          >
+            {t("Start Trading")}
+          </Button>
+        </a>
         <Button
           className="px-8 py-2 text-base font-semibold uppercase border-2 rounded-lg dark:border-foreground-800 font-work dark:text-foreground-800 hover:dark:border-foreground-900 hover:dark:text-foreground-900"
           onClick={onClickRollupBtn}
