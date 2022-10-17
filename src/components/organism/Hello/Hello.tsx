@@ -19,18 +19,23 @@ const Hello = ({ onClickRollupBtn }: props) => {
   const { t, i18n } = useTranslation([HELLO_TNS, COMMON_TNS]);
 
   return (
-    <section className={classNames(styles.hello, "relative")}>
+    <section
+      className={classNames(
+        styles.hello,
+        "relative xl:bg-[url('/assets/mascot2.png')] lg:bg-[url('/assets/mascot3.png')] bg-[url('/assets/mascot1.png')] bg-no-repeat xl:bg-right-bottom lg:bg-left-top md:bg-right-top 2xl:bg-40% xl:bg-50% lg:bg-30% md:bg-30% bg-50%"
+      )}
+    >
       <p className="pt-32 text-4xl font-semibold leading-tight text-center whitespace-pre-wrap xl:pt-52 md:text-6xl font-work ">
         {t("Join the Future of Trading")}
       </p>
 
-      <p className="mx-12 text-base font-light leading-normal tracking-wider text-center whitespace-pre-wrap md:mt-6 dark:text-foreground-800 md:mx-0 font-work">
+      <p className="mx-12 text-base font-light leading-normal tracking-wide text-center whitespace-pre-wrap md:mt-6 dark:text-foreground-800 md:mx-0 font-work">
         {t(
           "Zigzag is a native, easy-to-use, reliable, fully secure and low fee Decentralized Exchange built on ZK Rollups."
         )}
       </p>
 
-      <div className="flex flex-col justify-center gap-4 mx-16 mt-8 text-center md:mx-0 md:flex-row">
+      <div className="flex flex-col items-center justify-center gap-4 mx-16 mt-8 text-center md:mx-0 md:flex-row">
         <a
           href="https://trade.zigzag.exchange/"
           rel="noopener noreferrer"
@@ -45,7 +50,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           </Button>
         </a>
         <Button
-          className="px-8 py-2 text-base font-semibold uppercase border-2 rounded-lg dark:border-foreground-800 font-work dark:text-foreground-800 hover:dark:border-foreground-900 hover:dark:text-foreground-900"
+          className="py-2 text-base font-semibold uppercase border-2 rounded-lg whitespace-nowrap dark:border-foreground-800 font-work dark:text-foreground-800 hover:dark:border-foreground-900 hover:dark:text-foreground-900"
           onClick={onClickRollupBtn}
         >
           {t("What Are ZK Rollups?")}

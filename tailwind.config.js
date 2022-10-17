@@ -10,6 +10,15 @@ module.exports = {
   ],
   darkMode: "class", // or 'media' or 'class', also darkMode increases bundle size noticeably
   theme: {
+    backgroundSize: {
+      auto: "auto",
+      cover: "cover",
+      contain: "contain",
+      "50%": "50%",
+      "40%": "40%",
+      "30%": "30%",
+      16: "4rem",
+    },
     linearBorderGradients: {
       directions: {
         // defaults to these values
