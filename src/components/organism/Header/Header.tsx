@@ -105,13 +105,14 @@ export const Header: React.FC<HeaderProps> = (props) => {
             />
             <LinkText
               href="https://blog.zigzag.exchange/"
-              className="hidden py-2 text-sm font-semibold uppercase lg:ml-0 xl:ml-7 font-work lg:block"
+              className="hidden py-2 text-sm font-medium uppercase lg:ml-0 xl:ml-7 font-work lg:block hover:underline hover:underline-offset-2"
+              target="_blank"
             >
               BLOG
             </LinkText>
             <LinkText
               href="/contact"
-              className="hidden py-2 text-sm font-semibold uppercase lg:ml-4 xl:ml-10 font-work lg:block"
+              className="hidden py-2 text-sm font-medium uppercase lg:ml-4 xl:ml-10 font-work lg:block hover:underline hover:underline-offset-2"
             >
               Contact
             </LinkText>
@@ -189,7 +190,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Listbox.Options className="absolute w-full py-1 mt-1 overflow-hidden border rounded-md shadow-lg dark:bg-background-800 bg-foreground-900 dark:border-foreground-400 max-h-60 sm:text-sm">
+                    <Listbox.Options className="absolute w-full py-1 mt-1 overflow-hidden border rounded-md shadow-lg dark:bg-background-900 bg-foreground-900 dark:border-foreground-400 max-h-60 sm:text-sm">
                       {router.locales?.map((local, localIdx) => (
                         <Listbox.Option
                           key={localIdx}

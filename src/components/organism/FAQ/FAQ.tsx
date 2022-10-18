@@ -39,7 +39,7 @@ const FAQ = React.forwardRef<any, props>(
                 1: (
                   <a
                     href="https://t.co/yk7f1m0nmE"
-                    className="text-[#57F287] !hover:text-red-900"
+                    className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
                     rel="noopener noreferrer"
                     target="_blank"
                   />
@@ -80,7 +80,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-5 pb-3 text-base leading-6 tracking-wider ">
+                  <Disclosure.Panel className="px-5 pb-3 text-base font-light leading-6 font-work ">
                     ZigZag is a decentralized non-custodial order book exchange,
                     powered by zk-rollups. This allows our users to seamlessly
                     and securely trade with near-zero fees all while providing
@@ -124,7 +124,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-5 pb-3 text-base leading-6 tracking-wider ">
+                  <Disclosure.Panel className="px-5 pb-3 text-base font-light leading-6 font-work ">
                     ZK-Rollups are one of the options being developed for layer
                     2 construction to increase the scalability of Ethereum. All
                     funds are held by a smart contract on the mainchain, while
@@ -164,7 +164,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-5 pb-3 text-base leading-6 tracking-wider ">
+                  <Disclosure.Panel className="px-5 pb-3 text-base font-light leading-6 font-work ">
                     zkSync is a trustless protocol for scalable low-cost
                     payments on Ethereum, powered by zkRollup technology. It
                     uses zero-knowledge proofs and on-chain data availability to
@@ -201,7 +201,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-5 pb-3 text-base leading-6 tracking-wider ">
+                  <Disclosure.Panel className="px-5 pb-3 text-base font-light leading-6 font-work ">
                     To start using ZigZag, you will first have to connect your
                     Web3 wallet to our application. You’ll then have to bridge
                     funds over and activate your zkSync account, this includes a

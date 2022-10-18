@@ -11,8 +11,6 @@ const BlogItem = ({ data, ...props }: any) => {
     return node;
   }
 
-  console.log(data, props);
-
   return (
     <>
       <div className="relative flex flex-col col-span-1 rounded-lg shadow-lg bg-gradient-to-r from-primary-600 to-secondary-600">

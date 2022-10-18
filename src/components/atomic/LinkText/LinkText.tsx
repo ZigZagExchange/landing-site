@@ -4,8 +4,10 @@ import Link from "next/link";
 // https://github.com/i18next/react-i18next/issues/1090
 const LinkText = (props: any) => {
   return (
-    <Link {...props} href={props.href || ""}>
-      <a className={props.className}>{props.children}</a>
+    <Link {...props} href={props.href || ""} target={props.target}>
+      <a target={props.target} className={props.className}>
+        {props.children}
+      </a>
     </Link>
   );
 };

@@ -24,7 +24,7 @@ export default function Dropdown({
       className={classNames("relative inline-block text-left", className)}
     >
       <div>
-        <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-semibold uppercase bg-transparent rounded-md font-work">
+        <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium uppercase bg-transparent rounded-md font-work">
           {btnText}
           <ChevronDownIcon className="w-5 h-5 ml-2 -mr-1" aria-hidden="true" />
         </Menu.Button>
@@ -49,7 +49,7 @@ export default function Dropdown({
                       href="#"
                       className={classNames(
                         active ? " text-background-900" : "text-background-900",
-                        "block px-4 py-2 text-sm dark:text-white text-background-900"
+                        "block px-4 py-2 text-sm dark:text-foreground-800 hover:dark:text-foreground-900 text-background-900 hover:underline hover:underline-offset-2"
                       )}
                     >
                       {item.label}

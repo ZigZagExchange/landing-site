@@ -165,7 +165,7 @@ const Footer = () => {
                   return (
                     <a
                       href={item.url}
-                      className=" text-base !font-light font-work text-foreground-800"
+                      className=" text-base !font-light font-work text-foreground-800 hover:underline hover:underline-offset-4 hover:text-foreground-900"
                       rel="noopener noreferrer"
                       target="_blank"
                       key={index}

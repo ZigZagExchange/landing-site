@@ -29,7 +29,7 @@ const BenefitItem = ({ data }: BenefitItemProps) => {
       onMouseOver={onMouseOver}
       onMouseLeave={onMouseleave}
     >
-      <p className="p-4 text-lg font-semibold tracking-wider text-left font-work">
+      <p className="p-2 text-lg font-semibold tracking-wide text-left font-work">
         {data.title}
       </p>
       {over && (
@@ -37,7 +37,7 @@ const BenefitItem = ({ data }: BenefitItemProps) => {
           {data.text}
         </p>
       )}
-      <p className="absolute flex items-center text-xs font-semibold cursor-pointer bottom-3 font-work text-primary-900 hover:text-primary-800 right-3">
+      <p className="absolute flex items-center text-sm font-medium cursor-pointer bottom-3 font-work text-primary-900 hover:text-primary-800 right-3">
         Read More
         <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
       </p>

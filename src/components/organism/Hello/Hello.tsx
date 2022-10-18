@@ -25,7 +25,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
         "relative xl:bg-[url('/assets/mascot2.png')] lg:bg-[url('/assets/mascot3.png')] bg-[url('/assets/mascot1.png')] bg-no-repeat xl:bg-right-bottom lg:bg-left-top md:bg-right-top 2xl:bg-40% xl:bg-50% lg:bg-30% md:bg-30% bg-50%"
       )}
     >
-      <p className="pt-32 text-4xl font-semibold leading-tight text-center whitespace-pre-wrap xl:pt-52 md:text-6xl font-work ">
+      <p className="text-4xl font-semibold leading-tight text-center whitespace-pre-wrap pt-28 xl:pt-52 md:text-6xl font-work ">
         {t("Join the Future of Trading")}
       </p>
 
