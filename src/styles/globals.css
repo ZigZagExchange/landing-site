@@ -20,6 +20,8 @@
 body {
   color: black;
   background-color: theme("colors.background.50");
+  -webkit-font-smoothing: antialiased;
+  /* font-family: "Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,    Noto Color Emoji"; */
 }
 /* 
 a[href]:not([hidden]):not(.unstyled-a) {

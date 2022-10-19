@@ -62,7 +62,7 @@ module.exports = {
       lg: "0 2px 10px rgba(0, 0, 0, 0.5)",
     },
     fontFamily: {
-      work: ["Work Sans", "sans-serif"],
+      work: ["Inter var", "sans-serif"],
     },
     extend: {
       screens: {
@@ -152,9 +152,6 @@ module.exports = {
           800: "rgba(41, 45, 63, 0.72)",
           900: "rgba(41, 45, 63, 1)",
         },
-      },
-      fontFamily: {
-        work: ["Work Sans", "sans-serif"],
       },
     },
   },

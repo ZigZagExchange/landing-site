@@ -14,18 +14,18 @@ const StepOne = ({ className }: any) => {
       className={classNames(
         styles.stepOne,
         className,
-        "border p-5 rounded-2xl border-foreground-400 shadow-2xl  dark:shadow-gray-900"
+        "border p-5 rounded-2xl border-foreground-300 shadow dark:shadow-gray-900"
       )}
     >
-      <p className="text-2xl font-semibold text-left capitalize font-work">
+      <p className="text-2xl font-semibold text-left capitalize font-work dark:text-slate-50 text-slate-900 ">
         {t("Step 1")}
       </p>
-      <p className="mt-2 text-base font-light leading-6 tracking-wider text-left font-work">
+      <p className="mt-2 text-base font-normal leading-6 text-left font-work text-slate-600 dark:text-slate-400">
         {t(
           "Launch your app by clicking “Start Trading” and connect your wallet."
         )}
       </p>
-      <div className="flex flex-col items-center justify-center pt-8 pb-6 mt-4 text-center rounded-lg bg-gradient-to-r from-primary-600 to-secondary-600 mix-blend-hard-light">
+      <div className="flex flex-col items-center justify-center pt-8 pb-6 mt-4 text-center rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 mix-blend-hard-light">
         <Button className="mx-8 text-xs font-bold uppercase" type="gradient">
           {t("Start Trading")}
         </Button>

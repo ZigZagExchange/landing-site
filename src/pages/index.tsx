@@ -70,11 +70,19 @@ const Homepage: NextPage = () => {
   };
 
   return (
-    <div className={"" + " " + styles.root}>
+    <div
+      className={
+        "dark:bg-[#0B1120] bg-slate-50 bg-80% bg-no-repeat bg-top" +
+        " " +
+        styles.root
+      }
+    >
       <Head>
         <title>ZigZag</title>
         <meta name="description" content="ZigZag website" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://rsms.me/" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>
       <Header />
       <main className="container mx-auto">

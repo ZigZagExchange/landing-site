@@ -45,7 +45,7 @@ const Benefits = () => {
   };
   return (
     <section className="text-center">
-      <p className="mt-32 text-5xl font-semibold tracking-wider text-center md:mx-4 md:mt-0">
+      <p className="mt-32 text-4xl font-extrabold text-center md:text-5xl text-slate-900 dark:text-white md:mx-4 md:mt-0">
         Benefits and Features
       </p>
       <div className="grid gap-5 mt-16 md:px-8 lg:grid-cols-4 md:grid-cols-2 xl:gap-10 ">

@@ -20,7 +20,7 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
       className={classNames("relative inline-block text-left", className)}
     >
       <div>
-        <Menu.Button className="inline-flex justify-center py-2 text-sm font-semibold uppercase bg-transparent rounded-md shadow-sm font-work">
+        <Menu.Button className="inline-flex justify-center py-2 text-sm font-semibold bg-transparent rounded-md shadow-sm font-work">
           <MenuIcon className="w-5 h-5" aria-hidden="true" />
         </Menu.Button>
       </div>

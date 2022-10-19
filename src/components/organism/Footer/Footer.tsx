@@ -103,7 +103,7 @@ const Footer = () => {
       <div
         className={classNames(
           styles.footer,
-          "grid md:grid-cols-3 grid-cols-1 mt-44 lg:gap-16 gap-10 pb-16  border-b-2 border-foreground-400 "
+          "grid md:grid-cols-3 grid-cols-1 mt-44 lg:gap-16 gap-10 pb-16  border-b border-slate-400 dark:border-slate-400 "
         )}
       >
         <div>
@@ -115,42 +115,42 @@ const Footer = () => {
               height={32}
             />
           </Link>
-          <p className="mt-5 font-light leading-8 tracking-wide text-white font-work">
+          <p className="mt-5 font-normal leading-8 tracking-wide font-work text-slate-600 dark:text-slate-400">
             A decentralized order book exchange powered by zero-knowledge
             technology.
           </p>
           <div className="flex items-center gap-10 mt-7">
             <a
               href="https://twitter.com/ZigZagExchange"
-              className=" text-base !font-light font-work text-foreground-800"
+              className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <BsTwitter className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
+              <BsTwitter className="w-6 h-6 cursor-pointer" />
             </a>
             <a
               href="https://github.com/ZigZagExchange"
-              className=" text-base !font-light font-work text-foreground-800"
+              className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <BsGithub className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
+              <BsGithub className="w-6 h-6 cursor-pointer " />
             </a>
             <a
               href="https://t.co/yk7f1m0nmE"
-              className=" text-base !font-light font-work text-foreground-800"
+              className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <BsDiscord className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
+              <BsDiscord className="w-6 h-6 cursor-pointer " />
             </a>
             <a
               href="https://t.me/zigzagexchange"
-              className=" text-base !font-light font-work text-foreground-800"
+              className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <BsTelegram className="w-6 h-6 cursor-pointer text-foreground-700 hover:text-white" />
+              <BsTelegram className="w-6 h-6 cursor-pointer " />
             </a>
           </div>
         </div>
@@ -165,7 +165,7 @@ const Footer = () => {
                   return (
                     <a
                       href={item.url}
-                      className=" text-base !font-light font-work text-foreground-800 hover:underline hover:underline-offset-4 hover:text-foreground-900"
+                      className=" text-base !font-normal dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200 font-work  hover:underline hover:underline-offset-4 "
                       rel="noopener noreferrer"
                       target="_blank"
                       key={index}
@@ -180,7 +180,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-10 text-center">
-        <p className="font-normal font-work text-foreground-800">
+        <p className="font-normal font-work text-slate-600 dark:text-slate-400">
           © 2022 ZigZag. All rights reserved.
         </p>
       </div>

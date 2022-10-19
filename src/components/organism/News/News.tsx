@@ -41,7 +41,7 @@ const News = () => {
 
   return (
     <section className={"mt-48 md:px-8"}>
-      <p className="text-4xl font-semibold tracking-wider text-center md:text-5xl">
+      <p className="text-4xl font-extrabold text-center dark:text-slate-50 text-slate-900 md:text-5xl">
         {t("newsandupdates")}
       </p>
       <div className="grid gap-5 mt-16 lg:grid-cols-3 md:grid-cols-1 xl:gap-10">
