@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import { ArrowNarrowRightIcon } from "@heroicons/react/solid";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import styles from "./contactForm.module.css";

@@ -2,7 +2,7 @@
 import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { Disclosure, Transition } from "@headlessui/react";
-import { FAQ_TNS } from "@/lib/i18n/consts";
+import { COMMON_TNS } from "@/lib/i18n/consts";
 import Button from "@/components/atomic/Button/Button";
 import { PlusIcon, MinusIcon } from "@heroicons/react/solid";
 import { Trans, useTranslation } from "react-i18next";
@@ -17,7 +17,7 @@ type props = {
 // eslint-disable-next-line react/display-name
 const FAQ = React.forwardRef<any, props>(
   ({ rollupOpen, setRollupOpen }, ref) => {
-    const { t } = useTranslation([FAQ_TNS]);
+    const { t } = useTranslation([COMMON_TNS]);
 
     return (
       <section
@@ -58,7 +58,7 @@ const FAQ = React.forwardRef<any, props>(
             {({ open }) => (
               <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
                 <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work ">
-                  What is ZigZag?
+                  {t("What is ZigZag?")}
                   {open ? (
                     <MinusIcon
                       className="p-1 border rounded-full border-foreground-400 w-7 h-7"
@@ -81,13 +81,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 font-work ">
-                    ZigZag is a decentralized non-custodial order book exchange,
-                    powered by zk-rollups. This allows our users to seamlessly
-                    and securely trade with near-zero fees all while providing
-                    centralized exchange like quotes on all size trades. We also
-                    aim to provide the flawless functionality, experience and
-                    optimal liquidity centralized exchanges do all while being
-                    fully decentralized.
+                    {t("zigzag is a decentralized")}
                   </Disclosure.Panel>
                 </Transition>
               </div>
@@ -101,7 +95,7 @@ const FAQ = React.forwardRef<any, props>(
                     onClick={setRollupOpen}
                     className="flex items-center justify-between w-full text-xl font-semibold text-left font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
                   >
-                    What are ZK Rollups?
+                    {t("What are ZK Rollups?")}
                     {rollupOpen ? (
                       <MinusIcon
                         className="p-1 border rounded-full border-foreground-400 w-7 h-7"
@@ -125,14 +119,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 font-work">
-                    ZK-Rollups are one of the options being developed for layer
-                    2 construction to increase the scalability of Ethereum. All
-                    funds are held by a smart contract on the mainchain, while
-                    computation and storage are performed off-chain. The main
-                    idea is that instead of verifying each transaction
-                    separately, transactions are 'rolled up' to a single item
-                    (the rollup block), which is then being verified, approving
-                    all them simultaneously.
+                    {t("zk-rollups are one of the options")}
                   </Disclosure.Panel>
                 </Transition>
               </div>
@@ -142,7 +129,7 @@ const FAQ = React.forwardRef<any, props>(
             {({ open }) => (
               <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
                 <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work ">
-                  What is zkSync?
+                  {t("What is zkSync?")}
                   {open ? (
                     <MinusIcon
                       className="p-1 border rounded-full border-foreground-400 w-7 h-7"
@@ -165,11 +152,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 font-work">
-                    zkSync is a trustless protocol for scalable low-cost
-                    payments on Ethereum, powered by zkRollup technology. It
-                    uses zero-knowledge proofs and on-chain data availability to
-                    keep users' funds as safe as though they never left the
-                    mainnet.
+                    {t("zksync is a trustless protocol")}
                   </Disclosure.Panel>
                 </Transition>
               </div>
@@ -179,7 +162,7 @@ const FAQ = React.forwardRef<any, props>(
             {({ open }) => (
               <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
                 <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work ">
-                  How can I start using ZigZag?
+                  {t("How can I start using ZigZag?")}
                   {open ? (
                     <MinusIcon
                       className="p-1 border rounded-full border-foreground-400 w-7 h-7"
@@ -202,11 +185,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 font-work">
-                    To start using ZigZag, you will first have to connect your
-                    Web3 wallet to our application. You’ll then have to bridge
-                    funds over and activate your zkSync account, this includes a
-                    one-time transaction of roughly ~10$. To do so head over to
-                    ZigZag Bridge or zkSync bridge.
+                    {t("To start using zigzag")}
                   </Disclosure.Panel>
                 </Transition>
               </div>

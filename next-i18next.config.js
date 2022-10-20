@@ -1,7 +1,7 @@
 module.exports = {
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "tr"],
+    locales: ["en", "zh", "ir", "tr", "kr"],
   },
   defaultNS: "common",
   react: { useSuspense: false }, //TEMP

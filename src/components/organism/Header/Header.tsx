@@ -1,17 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import { Fragment, useState, useEffect } from "react";
 import { COMMON_TNS } from "@/lib/i18n/consts";
 import LinkText from "@/components/atomic/LinkText/LinkText";
 import { Listbox, Transition } from "@headlessui/react";
 import { FaDiscord, FaTwitter, FaTelegram, FaGithub } from "react-icons/fa";
-import {
-  MoonIcon,
-  SunIcon,
-  CheckIcon,
-  ChevronDownIcon,
-} from "@heroicons/react/solid";
+import { MoonIcon, SunIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
-import styles from "./header.module.css";
 import { useTheme } from "next-themes";
 import React from "react";
 import { useRouter } from "next/router";
@@ -22,61 +17,91 @@ import Link from "next/link";
 
 type HeaderProps = {};
 
+const languages = [
+  {
+    code: "en",
+    name: "English",
+    country_code: "en",
+    icon: "https://raw.githubusercontent.com/OnTheGoSystems/SVG-flags-language-switcher/master/flags/en.svg",
+  },
+  {
+    code: "zh",
+    name: "中文",
+    country_code: "zh",
+    icon: "https://raw.githubusercontent.com/OnTheGoSystems/SVG-flags-language-switcher/master/flags/cn.svg",
+  },
+  {
+    code: "ir",
+    name: "فارسی",
+    country_code: "ir",
+    icon: "https://raw.githubusercontent.com/OnTheGoSystems/SVG-flags-language-switcher/master/flags/ir.svg",
+  },
+  {
+    code: "tr",
+    name: "Türkçe",
+    country_code: "tr",
+    icon: "https://raw.githubusercontent.com/OnTheGoSystems/SVG-flags-language-switcher/master/flags/tr.svg",
+  },
+  {
+    code: "kr",
+    name: "한국어",
+    country_code: "kr",
+    icon: "https://raw.githubusercontent.com/OnTheGoSystems/SVG-flags-language-switcher/master/flags/kr.svg",
+  },
+];
+
+const supportOptions = [
+  { value: "helpcenter", label: "Help Center" },
+  { value: "documents", label: "Documents" },
+  { value: "community", label: "Community Support" },
+  { value: "governance", label: "Governance" },
+];
+
+const mobileOptions = [
+  { value: "helpcenter", label: "Help Center", url: "#" },
+  { value: "documents", label: "Documents", url: "#" },
+  { value: "community", label: "Community Support", url: "#" },
+  { value: "governance", label: "Governance", url: "#" },
+  { value: "blog", label: "Blog", url: "#" },
+  { value: "contact", label: "Contact", url: "#" },
+];
+
 /** Make sure to pass GLOSSARY_TNS and COMMON_TNS to where it is called */
 export const Header: React.FC<HeaderProps> = (props) => {
   //const { children } = props;
   const router = useRouter();
   const { theme, setTheme } = useTheme();
-
+  const { locale } = useRouter();
   const { t, i18n } = useTranslation([COMMON_TNS]);
 
   const [isMounted, setIsMounted] = useState(false);
-  const [selected, setSelected] = useState(router.locale);
+  const [selected, setSelected] = useState(languages[0]);
+  const [supportMenu, setSupportMenu] = useState(supportOptions);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
+  useEffect(() => {
+    const p: any = languages.find((lng) => lng.code === locale);
+    setSelected(p);
+    const support: any = supportOptions.map((item) => {
+      return { ...item, label: t(item.label) };
+    });
+    setSupportMenu(support);
+  }, [locale, t]);
+
   const switchTheme = () => {
     if (isMounted) setTheme(theme === "light" ? "dark" : "light");
   };
 
-  const handleSelectLang = (value: any) => {
+  const handleSelectLang = (option: any) => {
     //TODO as hook
-    const l = value;
-    i18n.changeLanguage(l);
-    router.push(router.route, undefined, { locale: l });
-    setSelected(value);
+    const v = option;
+    i18n.changeLanguage(option.code);
+    router.push(router.route, undefined, { locale: option.code });
+    setSelected(v);
   };
-
-  const fiatOptions = [
-    { value: "usd", label: "USD" },
-    { value: "euro", label: "EURO" },
-  ];
-
-  const supportOptions = [
-    { value: "helpcenter", label: "Help Center" },
-    { value: "documents", label: "Documents" },
-    { value: "community", label: "Community Support" },
-    { value: "governance", label: "Governance" },
-  ];
-
-  const labsOptions = [
-    { value: "mammoth_pool", label: "Mammoth pool" },
-    { value: "NFT_marketplace", label: "NFT Marketplace" },
-    { value: "ZKasino", label: "ZKasino" },
-    { value: "invisibl3", label: "Invisibl3" },
-    { value: "oracle", label: "Oracle" },
-  ];
-
-  const mobileOptions = [
-    { value: "helpcenter", label: "Help Center", url: "#" },
-    { value: "documents", label: "Documents", url: "#" },
-    { value: "community", label: "Community Support", url: "#" },
-    { value: "governance", label: "Governance", url: "#" },
-    { value: "blog", label: "Blog", url: "#" },
-    { value: "contact", label: "Contact", url: "#" },
-  ];
 
   if (!isMounted) return null;
 
@@ -99,8 +124,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
               className="hidden lg:ml-4 xl:ml-7 lg:block"
             /> */}
             <Dropdown
-              btnText={"Support"}
-              options={supportOptions}
+              btnText={t("Support")}
+              options={supportMenu}
               className="hidden lg:ml-0 xl:ml-7 lg:block"
             />
             <LinkText
@@ -108,13 +133,13 @@ export const Header: React.FC<HeaderProps> = (props) => {
               className="hidden py-2 text-sm font-semibold leading-6 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200 lg:ml-0 xl:ml-7 font-work lg:block hover:underline hover:underline-offset-2"
               target="_blank"
             >
-              Blog
+              {t("Blog")}
             </LinkText>
             <LinkText
               href="/contact"
               className="hidden py-2 text-sm font-semibold leading-6 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200 lg:ml-4 xl:ml-10 font-work lg:block hover:underline hover:underline-offset-2"
             >
-              Contact
+              {t("Contact")}
             </LinkText>
             {/* <Dropdown
               btnText={"ZigZag Labs"}
@@ -171,59 +196,63 @@ export const Header: React.FC<HeaderProps> = (props) => {
             </div>
             <div className="flex items-center ml-6 mr-4 lg:border-l lg:border-gray-500">
               <Listbox value={selected} onChange={handleSelectLang}>
-                <div className="relative">
-                  <Listbox.Button className="relative w-full py-1 pl-3 pr-8 ml-2 text-left bg-transparent rounded-lg cursor-pointer">
-                    <span className="block uppercase">{router.locale}</span>
+                <div className="relative mt-1">
+                  <Listbox.Button className="relative flex items-center w-full gap-2 py-[3px] pl-3 pr-8 text-sm font-semibold text-left cursor-pointer hover:text-primary-900 font-work dark:text-white-900 text-foreground400 ">
+                    <Image
+                      src={selected.icon}
+                      alt={selected.name}
+                      className="rounded-full"
+                      width={20}
+                      height={20}
+                    />
+                    <span className="block truncate">{selected.name}</span>
                     <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                       <ChevronDownIcon
-                        className="w-5 h-5 text-gray-400"
+                        className="w-5 h-5 mt-1"
                         aria-hidden="true"
                       />
                     </span>
                   </Listbox.Button>
                   <Transition
                     as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
+                    leave="transition ease-in duration-100"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
                   >
-                    <Listbox.Options className="absolute w-full py-1 mt-1 overflow-hidden border rounded-md shadow-lg dark:bg-background-900 bg-foreground-900 dark:border-foreground-400 max-h-60 sm:text-sm">
-                      {router.locales?.map((local, localIdx) => (
+                    <Listbox.Options className="absolute min-w-max right-0 py-1 mt-1 overflow-auto text-sm dark:bg-[#191A33] border dark:border-foreground-400 bg-sky-100 rounded-md shadow-lg max-h-60">
+                      {languages.map((lang, langIdx) => (
                         <Listbox.Option
-                          key={localIdx}
+                          key={langIdx}
                           className={({ active }) =>
-                            `cursor-pointer relative py-2 pl-10 pr-8 ${
+                            `relative cursor-pointer select-none py-2 px-4 ${
                               active
-                                ? "  dark:hover:text-foreground-800 horver:text-background-800"
-                                : " dark:hover:text-foreground-800 horver:text-background-800"
+                                ? "dark:bg-[#2B2E4A] bg-[#ecf8fa]"
+                                : "text-white-900"
                             }`
                           }
-                          value={local}
+                          value={lang}
                         >
-                          {({ selected }) => {
-                            return (
-                              <>
-                                <span
-                                  className={`block uppercase ${
-                                    selected ? "font-medium" : "font-normal"
-                                  }`}
-                                >
-                                  {local}
-                                </span>
-                                {selected ? (
-                                  <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                                    <CheckIcon
-                                      className="w-5 h-5"
-                                      aria-hidden="true"
-                                    />
-                                  </span>
-                                ) : null}
-                              </>
-                            );
-                          }}
+                          {({ selected }) => (
+                            <>
+                              <span
+                                className={`flex items-center gap-2 truncate ${
+                                  selected ? "font-medium" : "font-normal"
+                                }`}
+                              >
+                                <img
+                                  src={lang.icon}
+                                  alt={lang.name}
+                                  className="w-5 h-5 rounded-full"
+                                />
+                                {lang.name}
+                              </span>
+                              {/* {selected ? (
+                        <span className="absolute inset-y-0 right-0 flex items-center pr-3 text-primary-900">
+                          <CheckIcon className="w-5 h-5" aria-hidden="true" />
+                        </span>
+                      ) : null} */}
+                            </>
+                          )}
                         </Listbox.Option>
                       ))}
                     </Listbox.Options>
@@ -256,7 +285,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                   className="ml-8 text-xs font-bold uppercase"
                   type="gradient"
                 >
-                  Start Trading
+                  {t("Start Trading")}
                 </Button>
               </a>
             </div>

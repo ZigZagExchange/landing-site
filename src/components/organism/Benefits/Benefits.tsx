@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
-import classNames from "classnames";
-import Animation from "@/components/atomic/Animation/Animation";
+import React, { useEffect, useState } from "react";
 import BenefitItem from "@/components/atomic/BenefitItem/BenefitItem";
-import Slider from "react-slick";
-import unparalled_quotes from "../../../../public/assets/unparalled-quotes.svg";
-import security from "../../../../public/assets/security.svg";
-import fast_withdrawl from "../../../../public/assets/fast-withdrawl.svg";
+import { COMMON_TNS } from "@/lib/i18n/consts";
+import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
 
 const data = [
   {
@@ -31,25 +28,24 @@ const data = [
 ];
 
 const Benefits = () => {
-  const settings = {
-    infinite: false,
-    speed: 800,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    arrows: false,
-    adaptiveHeight: true,
-    centerMode: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    variableWidth: true,
-  };
+  const { locale } = useRouter();
+  const { t } = useTranslation([COMMON_TNS]);
+  const [selected, setSelected] = useState(data);
+
+  useEffect(() => {
+    const p: any = data.map((item) => {
+      return { ...item, title: t(item.title), text: t(item.text) };
+    });
+    setSelected(p);
+  }, [locale, t]);
+
   return (
     <section className="text-center">
       <p className="mt-32 text-4xl font-extrabold text-center md:text-5xl text-slate-900 dark:text-white md:mx-4 md:mt-0">
-        Benefits and Features
+        {t("Benefits and Features")}
       </p>
       <div className="grid gap-5 mt-16 md:px-8 lg:grid-cols-4 md:grid-cols-2 xl:gap-10 ">
-        {data.map((item, index) => {
+        {selected.map((item, index) => {
           return <BenefitItem data={item} key={index} />;
         })}
       </div>

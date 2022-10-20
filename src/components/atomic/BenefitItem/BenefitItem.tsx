@@ -3,6 +3,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { ChevronRightIcon } from "@heroicons/react/solid";
 import styles from "./benefitItem.module.css";
+import { COMMON_TNS } from "@/lib/i18n/consts";
+import { useTranslation } from "react-i18next";
 
 type BenefitItemProps = {
   data: { title: string; bgUrl: any; text: string };
@@ -10,6 +12,8 @@ type BenefitItemProps = {
 
 const BenefitItem = ({ data }: BenefitItemProps) => {
   const [over, setOver] = useState(false);
+
+  const { t } = useTranslation([COMMON_TNS]);
 
   const onMouseOver = () => {
     setOver(true);
@@ -39,7 +43,7 @@ const BenefitItem = ({ data }: BenefitItemProps) => {
         </p>
       )}
       <p className="absolute flex items-center text-sm font-semibold cursor-pointer bottom-3 font-work text-primary-900 hover:text-primary-800 right-3">
-        Read More
+        {t("Read More")}
         <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
       </p>
     </div>

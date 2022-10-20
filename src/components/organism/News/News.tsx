@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import axios from "axios";
-import { NEWS_TNS } from "@/lib/i18n/consts";
+import { COMMON_TNS } from "@/lib/i18n/consts";
 import { useTranslation } from "react-i18next";
 import BlogItem from "@/components/atomic/BlogItem";
 
@@ -9,7 +9,7 @@ const mediumURL =
   "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ZigZagExchange";
 
 const News = () => {
-  const { t, i18n } = useTranslation([NEWS_TNS]);
+  const { t, i18n } = useTranslation([COMMON_TNS]);
 
   const [data, setData] = useState<any>();
 

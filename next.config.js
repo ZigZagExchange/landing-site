@@ -6,7 +6,7 @@ module.exports = {
   i18n,
   //pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'], //for custom page extensions
   images: {
-    domains: ["assets.coingecko.com"],
+    domains: ["assets.coingecko.com", "raw.githubusercontent.com"],
     formats: ["image/avif", "image/webp"],
   },
 };

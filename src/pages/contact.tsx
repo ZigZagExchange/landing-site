@@ -1,14 +1,7 @@
 import { Header } from "@/components/organism/Header/Header";
 import Footer from "@/components/organism/Footer/Footer";
 import ContactForm from "@/components/organism/ContactForm/ContactForm";
-import {
-  COMMON_TNS,
-  GLOSSARY_TNS,
-  PAGES_TNS,
-  HELLO_TNS,
-  FAQ_TNS,
-  GETSTARTED_TNS,
-} from "@/lib/i18n/consts";
+import { COMMON_TNS } from "@/lib/i18n/consts";
 import { GetStaticProps, NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
@@ -20,22 +13,13 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale || "en", [
-        GETSTARTED_TNS,
-        HELLO_TNS,
-        COMMON_TNS,
-        HELLO_TNS,
-        FAQ_TNS,
-      ])),
+      ...(await serverSideTranslations(locale || "en", [COMMON_TNS])),
       // Will be passed to the page component as props
     },
   };
 };
 
 const Contactpage: NextPage = () => {
-  const { t } = useTranslation([PAGES_TNS], { keyPrefix: "index" });
-  const { t: gt } = useTranslation([GLOSSARY_TNS]);
-
   return (
     <div>
       {/* <div className={styles.imageWrapper}>

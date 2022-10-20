@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { COMMON_TNS, HELLO_TNS } from "@/lib/i18n/consts";
+import { COMMON_TNS } from "@/lib/i18n/consts";
 
 import { useTranslation } from "react-i18next";
 // import { useTheme } from "next-themes";
@@ -16,7 +16,7 @@ type props = {
 };
 
 const Hello = ({ onClickRollupBtn }: props) => {
-  const { t, i18n } = useTranslation([HELLO_TNS, COMMON_TNS]);
+  const { t, i18n } = useTranslation([COMMON_TNS]);
 
   return (
     <section

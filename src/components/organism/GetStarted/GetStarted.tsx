@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import classNames from "classnames";
 import Image from "next/image";
-import { GETSTARTED_TNS } from "@/lib/i18n/consts";
+import { COMMON_TNS } from "@/lib/i18n/consts";
 import { useTranslation } from "react-i18next";
 import YoutubeModal from "@/components/atomic/YoutubeModal/YoutubeModal";
 import styles from "./getStarted.module.css";
@@ -11,7 +11,7 @@ import StepThree from "@/components/atomic/StepThree/StepThree";
 import "aos/dist/aos.css";
 
 const GetStarted = () => {
-  const { t, i18n } = useTranslation([GETSTARTED_TNS]);
+  const { t, i18n } = useTranslation([COMMON_TNS]);
   return (
     <section className={"mt-48 md:px-8"}>
       <p className="text-5xl font-extrabold text-center dark:text-slate-50 text-slate-900 font-work">

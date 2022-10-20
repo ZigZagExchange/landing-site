@@ -3,7 +3,8 @@ import React from "react";
 import { BsTwitter, BsGithub, BsDiscord, BsTelegram } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
-
+import { COMMON_TNS } from "@/lib/i18n/consts";
+import { useTranslation } from "react-i18next";
 import styles from "./footer.module.css";
 
 const content = [
@@ -98,6 +99,7 @@ const content = [
 ];
 
 const Footer = () => {
+  const { t } = useTranslation([COMMON_TNS]);
   return (
     <div className="md:px-8">
       <div
@@ -116,8 +118,9 @@ const Footer = () => {
             />
           </Link>
           <p className="mt-5 font-normal leading-8 tracking-wide font-work text-slate-600 dark:text-slate-400">
-            A decentralized order book exchange powered by zero-knowledge
-            technology.
+            {t(
+              "A decentralized order book exchange powered by zero-knowledge technology."
+            )}
           </p>
           <div className="flex items-center gap-10 mt-7">
             <a
