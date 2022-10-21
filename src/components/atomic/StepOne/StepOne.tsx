@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { GETSTARTED_TNS, COMMON_TNS } from "@/lib/i18n/consts";
+import { COMMON_TNS } from "@/lib/i18n/consts";
 import { useTranslation } from "react-i18next";
 import { ArrowNarrowDownIcon } from "@heroicons/react/solid";
 import React from "react";
@@ -8,7 +8,7 @@ import styles from "./stepOne.module.css";
 import Button from "../Button/Button";
 
 const StepOne = ({ className }: any) => {
-  const { t } = useTranslation([GETSTARTED_TNS, COMMON_TNS]);
+  const { t } = useTranslation([COMMON_TNS]);
   return (
     <div
       className={classNames(

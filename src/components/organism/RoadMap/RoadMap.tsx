@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React from "react";
-import { GETSTARTED_TNS } from "@/lib/i18n/consts";
+import { COMMON_TNS } from "@/lib/i18n/consts";
 import { useTranslation } from "react-i18next";
 import RoadMapItem from "@/components/atomic/RoadMapItem/RoadMapItem";
 import styles from "./roadMap.module.css";
@@ -39,7 +39,7 @@ const data = [
 ];
 
 const RoadMap = () => {
-  const { t, i18n } = useTranslation([GETSTARTED_TNS]);
+  const { t, i18n } = useTranslation([COMMON_TNS]);
   return (
     <section
       className={classNames(
