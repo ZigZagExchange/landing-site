@@ -14,10 +14,10 @@ const GetStarted = () => {
   const { t, i18n } = useTranslation([COMMON_TNS]);
   return (
     <section className={"mt-48 md:px-8"}>
-      <p className="text-5xl font-extrabold text-center dark:text-slate-50 text-slate-900 font-work">
+      <p className="text-4xl font-extrabold text-center md:text-5xl dark:text-slate-50 text-slate-900 font-work">
         {t("Getting Started is Easy")}
       </p>
-      <p className="mt-4 text-xl font-medium text-center font-work text-slate-800 dark:text-slate-200">
+      <p className="mt-4 text-lg font-medium text-center md:text-xl font-work text-slate-800 dark:text-slate-200">
         {t("Trading on L2 has never been easier.")}
       </p>
       <div className="mt-16">

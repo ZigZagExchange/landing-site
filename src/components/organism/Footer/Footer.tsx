@@ -117,7 +117,7 @@ const Footer = () => {
               height={32}
             />
           </Link>
-          <p className="mt-5 font-normal leading-8 tracking-wide font-work text-slate-600 dark:text-slate-400">
+          <p className="mt-5 font-normal leading-8 tracking-wide font-work text-slate-800 dark:text-slate-200">
             {t(
               "A decentralized order book exchange powered by zero-knowledge technology."
             )}

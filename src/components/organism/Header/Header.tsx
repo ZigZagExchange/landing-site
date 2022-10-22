@@ -58,10 +58,10 @@ const supportOptions = [
 ];
 
 const mobileOptions = [
-  { value: "helpcenter", label: "Help Center", url: "#" },
-  { value: "documents", label: "Documents", url: "#" },
-  { value: "community", label: "Community Support", url: "#" },
-  { value: "governance", label: "Governance", url: "#" },
+  { value: "helpcenter", label: "Help Center" },
+  { value: "documents", label: "Documents" },
+  { value: "community", label: "Community Support" },
+  { value: "governance", label: "Governance" },
   { value: "blog", label: "Blog", url: "#" },
   { value: "contact", label: "Contact", url: "#" },
 ];
@@ -77,6 +77,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
   const [isMounted, setIsMounted] = useState(false);
   const [selected, setSelected] = useState(languages[0]);
   const [supportMenu, setSupportMenu] = useState(supportOptions);
+  const [mobileSupportMenu, setMobileSupportMenu] = useState(mobileOptions);
 
   useEffect(() => {
     setIsMounted(true);
@@ -89,6 +90,10 @@ export const Header: React.FC<HeaderProps> = (props) => {
       return { ...item, label: t(item.label) };
     });
     setSupportMenu(support);
+    const mobileSupport: any = mobileOptions.map((item) => {
+      return { ...item, label: t(item.label) };
+    });
+    setMobileSupportMenu(mobileSupport);
   }, [locale, t]);
 
   const switchTheme = () => {
@@ -146,8 +151,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
               options={labsOptions}
               className="hidden lg:ml-0 xl:ml-7 lg:block"
             /> */}
-            <div className="lg:hidden ml-7">
-              <MobileDropdown options={mobileOptions} />
+            <div className="ml-2 lg:hidden md:ml-7">
+              <MobileDropdown options={mobileSupportMenu} />
             </div>
           </div>
           <div className="flex items-center justify-center ">
@@ -194,7 +199,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 />
               </a>
             </div>
-            <div className="flex items-center ml-6 mr-4 lg:border-l lg:border-gray-500">
+            <div className="flex items-center ml-2 mr-4 md:ml-6 lg:border-l lg:border-gray-500">
               <Listbox value={selected} onChange={handleSelectLang}>
                 <div className="relative mt-1">
                   <Listbox.Button className="relative flex items-center w-full gap-2 py-[3px] pl-3 pr-8 text-sm font-semibold text-left cursor-pointer hover:text-primary-900 font-work dark:text-white-900 text-foreground400 ">
@@ -259,7 +264,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                   </Transition>
                 </div>
               </Listbox>
-              <div className="px-4">
+              <div className="md:px-4">
                 {theme === "dark" ? (
                   <SunIcon
                     className="w-5 h-5 text-white cursor-pointer"
@@ -274,7 +279,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               </div>
             </div>
 
-            <div className="border-l border-gray-500">
+            <div className="border-gray-500 md:border-l">
               <a
                 href="https://trade.zigzag.exchange/"
                 rel="noopener noreferrer"
@@ -282,7 +287,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 className="!hover:no-underline"
               >
                 <Button
-                  className="ml-8 text-xs font-bold uppercase"
+                  className="text-xs font-bold uppercase md:ml-8"
                   type="gradient"
                 >
                   {t("Start Trading")}
