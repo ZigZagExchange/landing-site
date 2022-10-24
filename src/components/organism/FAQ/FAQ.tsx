@@ -5,6 +5,7 @@ import { Disclosure, Transition } from "@headlessui/react";
 import { COMMON_TNS } from "@/lib/i18n/consts";
 import Button from "@/components/atomic/Button/Button";
 import { PlusIcon, MinusIcon } from "@heroicons/react/solid";
+import { HiOutlineExternalLink } from "react-icons/hi";
 import { Trans, useTranslation } from "react-i18next";
 import styles from "./FAQ.module.css";
 import classNames from "classnames";
@@ -48,9 +49,17 @@ const FAQ = React.forwardRef<any, props>(
             />
           </p>
           <div>
-            <Button className="py-2 mt-4 text-base font-semibold border-2 rounded-lg whitespace-nowrap dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
-              {t("VIEW THE DOCS")}
-            </Button>
+            <a
+              href="https://docs.zigzag.exchange/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="!hover:no-underline"
+            >
+              <Button className="flex gap-1 py-2 mt-4 text-base font-semibold border-2 rounded-lg whitespace-nowrap dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
+                {t("Documentation")}
+                <HiOutlineExternalLink className="w-3 h-3" />
+              </Button>
+            </a>
           </div>
         </div>
         <div className="col-span-2 md:col-end-6 ">
