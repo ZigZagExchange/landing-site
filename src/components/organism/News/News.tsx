@@ -4,6 +4,8 @@ import axios from "axios";
 import { COMMON_TNS } from "@/lib/i18n/consts";
 import { useTranslation } from "react-i18next";
 import BlogItem from "@/components/atomic/BlogItem";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
+import { useTheme } from "next-themes";
 
 const mediumURL =
   "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ZigZagExchange";
@@ -12,6 +14,7 @@ const News = () => {
   const { t, i18n } = useTranslation([COMMON_TNS]);
 
   const [data, setData] = useState<any>();
+  const { theme } = useTheme();
 
   useEffect(() => {
     axios
@@ -45,8 +48,17 @@ const News = () => {
         {t("newsandupdates")}
       </p>
       <div className="grid gap-5 mt-16 lg:grid-cols-3 md:grid-cols-1 xl:gap-10">
+        {
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="ZigZagExchange"
+            autoHeight
+            theme={theme === "dark" ? "dark" : "light"}
+            noScrollbar={true}
+          />
+        }
         {data &&
-          data?.item.slice(0, 3).map((item: any, index: any) => {
+          data?.item.slice(0, 2).map((item: any, index: any) => {
             return <BlogItem data={item} {...data.profile} key={index} />;
           })}
       </div>

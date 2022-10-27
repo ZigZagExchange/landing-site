@@ -116,12 +116,21 @@ export const Header: React.FC<HeaderProps> = (props) => {
         <div className="flex items-center justify-between h-20 m-auto 2xl:max-w-screen-2xl xl:max-w-screen-xl ">
           <div className="flex items-center ">
             <Link href="/" passHref={true}>
-              <Image
-                src="/assets/logo.png"
-                alt="Vercel Logo"
-                width={100}
-                height={32}
-              />
+              {theme === "dark" ? (
+                <Image
+                  src="/assets/logo.png"
+                  alt="Vercel Logo"
+                  width={100}
+                  height={32}
+                />
+              ) : (
+                <Image
+                  src="/assets/logo-dark.png"
+                  alt="Vercel Logo"
+                  width={100}
+                  height={32}
+                />
+              )}
             </Link>
             {/* <Dropdown
               btnText={t("fiat")}
@@ -178,7 +187,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 />
               </a>
               <a
-                href="https://t.co/yk7f1m0nmE"
+                href="https://discord.com/invite/zigzag"
                 rel="noopener noreferrer"
                 target="_blank"
               >

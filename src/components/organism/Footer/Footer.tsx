@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { COMMON_TNS } from "@/lib/i18n/consts";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "next-themes";
+
 import styles from "./footer.module.css";
 
 const content = [
@@ -84,7 +86,7 @@ const content = [
       },
       {
         name: "Discord",
-        url: "https://t.co/yk7f1m0nmE",
+        url: "https://discord.com/invite/zigzag",
       },
       {
         name: "Telegram",
@@ -100,6 +102,7 @@ const content = [
 
 const Footer = () => {
   const { t } = useTranslation([COMMON_TNS]);
+  const { theme } = useTheme();
   return (
     <div className="md:px-8">
       <div
@@ -110,12 +113,21 @@ const Footer = () => {
       >
         <div>
           <Link href="/" passHref={true}>
-            <Image
-              src="/assets/logo.png"
-              alt="Vercel Logo"
-              width={100}
-              height={32}
-            />
+            {theme === "dark" ? (
+              <Image
+                src="/assets/logo.png"
+                alt="Vercel Logo"
+                width={100}
+                height={32}
+              />
+            ) : (
+              <Image
+                src="/assets/logo-dark.png"
+                alt="Vercel Logo"
+                width={100}
+                height={32}
+              />
+            )}
           </Link>
           <p className="mt-5 font-normal leading-8 tracking-wide font-work text-slate-800 dark:text-slate-200">
             {t(
