@@ -194,7 +194,29 @@ const FAQ = React.forwardRef<any, props>(
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 font-work">
-                    {t("To start using zigzag")}
+                    <Trans
+                      t={t}
+                      i18nKey="To start using zigzag"
+                      components={{
+                        1: (
+                          <a
+                            href="https://twitter.com/zigzagkedar/status/1580249833352220673"
+                            className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          />
+                        ),
+                        2: (
+                          <a
+                            href="https://twitter.com/ZigZagExchange/status/1584945659664551936 "
+                            className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          />
+                        ),
+                      }}
+                    />
+                    {/* {t("To start using zigzag")} */}
                   </Disclosure.Panel>
                 </Transition>
               </div>
