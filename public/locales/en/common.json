@@ -48,5 +48,6 @@
   "zksync is a trustless protocol": "zkSync is a trustless protocol for scalable low-cost payments on Ethereum, powered by zkRollup technology. It uses zero-knowledge proofs and on-chain data availability to keep users' funds as safe as though they never left the mainnet.",
   "How can I start using ZigZag?": "How can I start using ZigZag?",
   "To start using zigzag": "To start using ZigZag, you will first have to connect your Web3 wallet to our application. You’ll then have to bridge funds over and activate your zkSync account, this includes a one-time transaction of roughly ~10$. To do so head over to ZigZag Bridge or zkSync bridge.",
-  "A decentralized order book exchange powered by zero-knowledge technology.": "A decentralized order book exchange powered by zero-knowledge technology."
+  "A decentralized order book exchange powered by zero-knowledge technology.": "A decentralized order book exchange powered by zero-knowledge technology.",
+  "Collaborations and Jobs": "We are always open to potential partnerships and are on the lookout for talented developers, designers and crypto marketing geniuses. If you would like to get in touch with us, please do so using the form below."
 }

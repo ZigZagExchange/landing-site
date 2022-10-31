@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npx nodemon server/index.js",
     "build": "next build",
-    "start": "next start",
+    "start": "cross-env NODE_ENV=production node server.js",
     "test": "jest --watch",
     "test:once": "jest --verbose",
     "lint": "next lint"
@@ -29,9 +29,12 @@
     "classnames": "^2.3.1",
     "d3-array": "^3.1.4",
     "d3-time-format": "^4.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "formik": "^2.2.9",
     "moment": "^2.29.4",
     "nanoid": "^3.1.30",
+    "needle": "^3.1.0",
     "next": "12.0.3",
     "next-i18next": "^9.0.1",
     "next-themes": "^0.0.15",
@@ -43,6 +46,7 @@
     "react-slick": "^0.28.1",
     "react-twitter-embed": "^4.0.4",
     "slick-carousel": "^1.8.1",
+    "socket.io": "^4.5.3",
     "tailwindcss-border-gradient-radius": "^3.0.1",
     "victory": "^36.3.1",
     "yup": "^0.32.11"
