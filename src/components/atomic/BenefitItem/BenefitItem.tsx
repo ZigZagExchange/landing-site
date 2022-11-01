@@ -29,7 +29,7 @@ const BenefitItem = ({ data }: BenefitItemProps) => {
         styles.benefitItem,
         !over && `${data.bgUrl}`,
         `bg-no-repeat bg-cover bg-center relative bg-gradient-to-r from-primary-600 to-secondary-600 h-72 shadow-2xl
-         duration-150 ease-in-out hover:-translate-y-1 hover:scale-100 rounded-xl p-4 cursor-pointer`
+         duration-150 ease-in-out hover:-translate-y-1 hover:scale-100 rounded-xl p-4 cursor-pointer overflow-auto scrollbar`
       )}
       onMouseOver={onMouseOver}
       onMouseLeave={onMouseleave}
@@ -38,14 +38,14 @@ const BenefitItem = ({ data }: BenefitItemProps) => {
         {data.title}
       </p>
       {over && (
-        <p className="p-4 pt-3 text-base font-medium text-left transition ease-in-out transform duration-800 font-work dark:text-slate-300 text-slate-700">
+        <p className="px-3 !pt-1 text-base font-medium text-left transition ease-in-out transform duration-800 font-work dark:text-slate-300 text-slate-700">
           {data.text}
         </p>
       )}
-      <p className="absolute flex items-center text-sm font-semibold cursor-pointer bottom-3 font-work text-primary-900 hover:text-primary-800 right-3">
+      {/* <p className="absolute flex items-center text-sm font-semibold cursor-pointer bottom-3 font-work text-primary-900 hover:text-primary-800 right-3">
         {t("Read More")}
         <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
-      </p>
+      </p> */}
     </div>
   );
 };
