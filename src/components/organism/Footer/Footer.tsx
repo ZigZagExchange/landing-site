@@ -11,24 +11,7 @@ import styles from "./footer.module.css";
 
 const content = [
   {
-    category: "ZIGZAG ECOSYSTEM",
-    items: [
-      {
-        name: "Orderbook DEX",
-        url: "https://trade.zigzag.exchange/",
-      },
-      {
-        name: "Mammoth Pool",
-        url: "https://mammoth.zigzag.exchange/",
-      },
-      {
-        name: "ZigZag Labs",
-        url: "https://zigzaglabs.io/",
-      },
-    ],
-  },
-  {
-    category: "RESOURCES",
+    category: "Resources",
     items: [
       {
         name: "Documentation",
@@ -39,22 +22,22 @@ const content = [
         url: "https://status.zigzag.exchange/",
       },
       {
-        name: "Github",
+        name: "GitHub",
         url: "https://github.com/ZigZagExchange",
       },
       {
         name: "Blog",
         url: "https://blog.zigzag.exchange/",
       },
-      {
-        name: "zkRollups Ecosystem",
-        url: "https://zigzaglabs.io/",
-      },
     ],
   },
   {
-    category: "LINKS",
+    category: "Links",
     items: [
+      {
+        name: "dApp",
+        url: "https://trade.zigzag.exchange/",
+      },
       {
         name: "zkSync",
         url: "https://zksync.io/",
@@ -64,21 +47,17 @@ const content = [
         url: "https://starknet.io/",
       },
       {
-        name: "Argent",
-        url: "https://www.argent.xyz/",
-      },
-      {
         name: "CoinGecko",
         url: "https://www.coingecko.com/en/coins/zigzag",
       },
       {
-        name: "Coinmarketcap",
+        name: "CoinMarketCap",
         url: "https://coinmarketcap.com/currencies/zigzag/",
       },
     ],
   },
   {
-    category: "COMMUNITY",
+    category: "Community",
     items: [
       {
         name: "Twitter",
@@ -108,7 +87,7 @@ const Footer = () => {
       <div
         className={classNames(
           styles.footer,
-          "grid md:grid-cols-3 grid-cols-1 mt-44 lg:gap-16 gap-10 pb-16  border-b border-slate-400 dark:border-slate-400 "
+          "grid grid-cols-1 md:grid-cols-3 mt-44 lg:gap-16 gap-10 pb-16  border-b border-slate-400 dark:border-slate-400 "
         )}
       >
         <div>
@@ -169,7 +148,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="grid grid-cols-2 col-span-2 gap-5 lg:grid-cols-4">
+        <div className="grid grid-cols-2 col-span-2 gap-5 lg:grid-cols-3">
           {content.map((data: any, idx: any) => {
             return (
               <div className="flex flex-col gap-4 md:ml-10 lg:ml-0" key={idx}>

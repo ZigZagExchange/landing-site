@@ -1,3 +1,6 @@
+const http = require("http");
+const socketIo = require("socket.io");
+
 const express = require("express");
 const next = require("next");
 
@@ -10,7 +13,9 @@ app
   .prepare()
   .then(() => {
     const server = express();
-    const io = socketIo(server);
+    const serverd = http.createServer(server);
+    const io = socketIo(serverd);
+    // const io = socketIo(server);
     const showRoutes = require("./routes/index.js");
 
     server.use("/api", showRoutes(server));
