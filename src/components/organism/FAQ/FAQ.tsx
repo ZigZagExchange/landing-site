@@ -89,7 +89,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 font-work ">
+                  <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
                     {t("zigzag is a decentralized")}
                   </Disclosure.Panel>
                 </Transition>
@@ -127,7 +127,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 font-work">
+                  <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
                     {t("zk-rollups are one of the options")}
                   </Disclosure.Panel>
                 </Transition>
@@ -160,7 +160,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 font-work">
+                  <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
                     {t("zksync is a trustless protocol")}
                   </Disclosure.Panel>
                 </Transition>
@@ -193,7 +193,7 @@ const FAQ = React.forwardRef<any, props>(
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 font-work">
+                  <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
                     <Trans
                       t={t}
                       i18nKey="To start using zigzag"

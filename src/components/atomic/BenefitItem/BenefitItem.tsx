@@ -38,7 +38,7 @@ const BenefitItem = ({ data }: BenefitItemProps) => {
         {data.title}
       </p>
       {over && (
-        <p className="px-3 !pt-1 text-base font-medium text-left transition ease-in-out transform duration-800 font-work dark:text-slate-300 text-slate-700">
+        <p className="px-3 !pt-1 text-base font-medium text-left transition ease-in-out transform duration-800 font-work dark:text-slate-300 text-slate-700 whitespace-pre-line">
           {data.text}
         </p>
       )}
