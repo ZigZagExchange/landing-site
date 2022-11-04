@@ -1,6 +1,6 @@
 const http = require("http");
 const socketIo = require("socket.io");
-
+const request = require("request");
 const express = require("express");
 const next = require("next");
 
@@ -51,13 +51,13 @@ app
     const sleep = async (delay) => {
       return new Promise((resolve) => setTimeout(() => resolve(true), delay));
     };
+
     const streamTweets = (socket, token) => {
       let stream;
-
       const config = {
         url: streamURL,
         auth: {
-          bearer: token,
+          bearer: process.env.TWITTER_BEARER_TOKEN,
         },
         timeout: 31000,
       };
@@ -89,6 +89,7 @@ app
             reconnect(stream, socket, token);
           });
       } catch (e) {
+        console.log(e);
         socket.emit("authError", authMessage);
       }
     };
@@ -102,11 +103,12 @@ app
 
     io.on("connection", async (socket) => {
       try {
-        const token = BEARER_TOKEN;
+        const token = process.env.TWITTER_BEARER_TOKEN;
         console.log("connected");
-        io.emit("connect", "Client connected");
-        const stream = streamTweets(io, token);
+        io.emit("connected", "Client connected");
+        const stream = streamTweets(socket, token);
       } catch (e) {
+        console.log(e);
         io.emit("authError", authMessage);
       }
     });

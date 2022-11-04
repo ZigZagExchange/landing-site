@@ -21,13 +21,14 @@ const News = () => {
     let socket;
 
     if (process.env.NODE_ENV === "development") {
-      console.log("asdfasdfasdf");
       socket = socketIOClient("http://localhost:3000/");
     } else {
       socket = socketIOClient("/");
     }
 
-    socket.on("connect", () => {});
+    socket.on("connected", () => {
+      console.log("server connected");
+    });
     socket.on("tweet", (json) => {
       if (json.data) {
         // dispatch({ type: "add_tweet", payload: json });
