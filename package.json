@@ -47,6 +47,7 @@
     "react-twitter-embed": "^4.0.4",
     "slick-carousel": "^1.8.1",
     "socket.io": "^4.5.3",
+    "socket.io-client": "^4.5.3",
     "tailwindcss-border-gradient-radius": "^3.0.1",
     "victory": "^36.3.1",
     "yup": "^0.32.11"
