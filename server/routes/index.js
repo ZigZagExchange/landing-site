@@ -1,13 +1,24 @@
 const express = require("express");
 const router = express.Router();
+const request = require("request");
 
 function routes(app) {
-  router.get("/movies", (req, res) => {
-    res.end("We made it! And it's great");
-  });
-
-  router.get("/movies/:id", (req, res) => {
-    return app.render(req, res, "/movies", { id: req.params.id });
+  router.get("/tweets", async (req, res) => {
+    const config = {
+      url: "https://api.twitter.com/2/users/1429883723307110434/tweets",
+      auth: {
+        bearer: process.env.TWITTER_BEARER_TOKEN,
+      },
+      timeout: 31000,
+    };
+    try {
+      request(config, function (error, response, body) {
+        res.send(body);
+      });
+    } catch (e) {
+      console.log(e);
+      res.send(e);
+    }
   });
 
   return router;
