@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx nodemon server/index.js",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server.js",
+    "start": "cross-env NODE_ENV=production node server/index.js",
     "test": "jest --watch",
     "test:once": "jest --verbose",
     "lint": "next lint"

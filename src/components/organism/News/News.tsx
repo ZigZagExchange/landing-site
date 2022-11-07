@@ -30,6 +30,7 @@ const News = () => {
   }, []);
 
   useEffect(() => {
+    const config = {};
     axios
       .get(mediumURL)
       .then((data: any) => {
