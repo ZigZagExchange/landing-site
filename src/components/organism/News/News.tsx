@@ -18,9 +18,19 @@ const News = () => {
   const { theme } = useTheme();
 
   useEffect(() => {
-    axios
-      .get("/api/tweets")
+    const headers = {
+      accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization:
+        "Bearer" +
+        "AAAAAAAAAAAAAAAAAAAAAB%2BdiwEAAAAAsrqJwvCPNs4qGi7xrrGjcdZWrXg%3DpRRzQzP8I4veFS0UsIiMKqDcQyHSKXyJeFkU1dBEER3s6j6i0a",
+    };
+
+    fetch("https://api.twitter.com/2/users/1429883723307110434/tweets", {
+      headers,
+    })
       .then((data: any) => {
+        console.log(data);
         console.log(data.data.meta);
         setTweetsId(data.data.meta.newest_id);
       })
@@ -30,7 +40,6 @@ const News = () => {
   }, []);
 
   useEffect(() => {
-    const config = {};
     axios
       .get(mediumURL)
       .then((data: any) => {
