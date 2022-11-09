@@ -18,19 +18,9 @@ const News = () => {
   const { theme } = useTheme();
 
   useEffect(() => {
-    const headers = {
-      accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization:
-        "Bearer" +
-        "AAAAAAAAAAAAAAAAAAAAAB%2BdiwEAAAAAsrqJwvCPNs4qGi7xrrGjcdZWrXg%3DpRRzQzP8I4veFS0UsIiMKqDcQyHSKXyJeFkU1dBEER3s6j6i0a",
-    };
-
-    fetch("https://api.twitter.com/2/users/1429883723307110434/tweets", {
-      headers,
-    })
+    axios
+      .get("/api/tweets")
       .then((data: any) => {
-        console.log(data);
         console.log(data.data.meta);
         setTweetsId(data.data.meta.newest_id);
       })
@@ -40,6 +30,7 @@ const News = () => {
   }, []);
 
   useEffect(() => {
+    const config = {};
     axios
       .get(mediumURL)
       .then((data: any) => {
@@ -70,19 +61,20 @@ const News = () => {
       <p className="text-4xl font-extrabold text-center dark:text-slate-50 text-slate-900 md:text-5xl">
         {t("newsandupdates")}
       </p>
-      <div className="grid gap-5 mt-16 lg:grid-cols-3 md:grid-cols-1 xl:gap-10">
-        {tweetsId && <TwitterTweetEmbed tweetId={tweetsId} />}
-        {/* {
-          <TwitterTimelineEmbed
-            sourceType="profile"
-            screenName="ZigZagExchange"
-            autoHeight
-            theme={theme === "dark" ? "dark" : "light"}
-            noScrollbar={true}
-          />
-        } */}
+      <div className="grid gap-6 mt-16 lg:grid-cols-3 md:grid-cols-1 xl:gap-10">
+        <TwitterTweetEmbed
+          tweetId={"1584945659664551936"}
+          options={{
+            // cards: "hidden",
+            height: 400,
+            width: "100%",
+            maxWidth: "100%",
+          }}
+        />
+        <TwitterTweetEmbed tweetId={"1573020039762034689"} />
+        <TwitterTweetEmbed tweetId={"1578418911363465225"} />
         {data &&
-          data?.item.slice(0, 2).map((item: any, index: any) => {
+          data?.item.slice(0, 3).map((item: any, index: any) => {
             return <BlogItem data={item} {...data.profile} key={index} />;
           })}
       </div>
