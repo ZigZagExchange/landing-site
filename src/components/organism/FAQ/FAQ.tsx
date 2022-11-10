@@ -161,7 +161,20 @@ const FAQ = React.forwardRef<any, props>(
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
-                    {t("zksync is a trustless protocol")}
+                    <Trans
+                      t={t}
+                      i18nKey="zksync is a trustless protocol"
+                      components={{
+                        1: (
+                          <a
+                            href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"
+                            className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          />
+                        ),
+                      }}
+                    />
                   </Disclosure.Panel>
                 </Transition>
               </div>

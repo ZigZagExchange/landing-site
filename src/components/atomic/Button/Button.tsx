@@ -7,6 +7,7 @@ type buttonProps = {
   className?: string;
   children: React.ReactNode;
   type?: string;
+  disabled?: boolean;
   onClick?: () => void;
 };
 
@@ -14,6 +15,7 @@ const Button = ({
   className,
   children,
   type = "graident",
+  disabled,
   onClick,
 }: buttonProps) => {
   return (
@@ -24,6 +26,7 @@ const Button = ({
         "px-4 py-2 block text-foreground-900"
       )}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>
