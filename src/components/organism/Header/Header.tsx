@@ -52,8 +52,8 @@ const languages = [
 
 const supportOptions = [
   { value: "https://docs.zigzag.exchange/", label: "Documents" },
-  { value: "community", label: "Community Support" },
-  { value: "governance", label: "Governance" },
+  { value: "https://discord.com/invite/zigzag", label: "Community Support" },
+  { value: "https://forum.zigzaglabs.io/", label: "Governance" },
 ];
 
 const mobileOptions = [
@@ -62,8 +62,16 @@ const mobileOptions = [
     label: "Documents",
     url: "https://docs.zigzag.exchange/",
   },
-  { value: "community", label: "Community Support" },
-  { value: "governance", label: "Governance" },
+  {
+    value: "community",
+    label: "Community Support",
+    url: "https://discord.com/invite/zigzag",
+  },
+  {
+    value: "governance",
+    label: "Governance",
+    url: "https://forum.zigzaglabs.io/",
+  },
   { value: "blog", label: "Blog", url: "https://blog.zigzag.exchange/" },
   { value: "contact", label: "Contact", url: "/contact" },
 ];

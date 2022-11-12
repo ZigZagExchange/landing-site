@@ -90,7 +90,20 @@ const FAQ = React.forwardRef<any, props>(
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
-                    {t("zigzag is a decentralized")}
+                    <Trans
+                      t={t}
+                      i18nKey="zigzag is a decentralized"
+                      components={{
+                        1: (
+                          <a
+                            href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"
+                            className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          />
+                        ),
+                      }}
+                    />
                   </Disclosure.Panel>
                 </Transition>
               </div>
@@ -128,7 +141,20 @@ const FAQ = React.forwardRef<any, props>(
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
-                    {t("zk-rollups are one of the options")}
+                    <Trans
+                      t={t}
+                      i18nKey="zk-rollups are one of the options"
+                      components={{
+                        1: (
+                          <a
+                            href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"
+                            className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          />
+                        ),
+                      }}
+                    />
                   </Disclosure.Panel>
                 </Transition>
               </div>
@@ -221,7 +247,15 @@ const FAQ = React.forwardRef<any, props>(
                         ),
                         2: (
                           <a
-                            href="https://twitter.com/ZigZagExchange/status/1584945659664551936 "
+                            href="https://twitter.com/ZigZagExchange/status/1584945659664551936"
+                            className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          />
+                        ),
+                        3: (
+                          <a
+                            href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"
                             className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
                             rel="noopener noreferrer"
                             target="_blank"
