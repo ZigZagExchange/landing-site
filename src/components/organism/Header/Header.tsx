@@ -51,19 +51,21 @@ const languages = [
 ];
 
 const supportOptions = [
-  { value: "helpcenter", label: "Help Center" },
-  { value: "documents", label: "Documents" },
+  { value: "https://docs.zigzag.exchange/", label: "Documents" },
   { value: "community", label: "Community Support" },
   { value: "governance", label: "Governance" },
 ];
 
 const mobileOptions = [
-  { value: "helpcenter", label: "Help Center" },
-  { value: "documents", label: "Documents" },
+  {
+    value: "documents",
+    label: "Documents",
+    url: "https://docs.zigzag.exchange/",
+  },
   { value: "community", label: "Community Support" },
   { value: "governance", label: "Governance" },
-  { value: "blog", label: "Blog", url: "#" },
-  { value: "contact", label: "Contact", url: "#" },
+  { value: "blog", label: "Blog", url: "https://blog.zigzag.exchange/" },
+  { value: "contact", label: "Contact", url: "/contact" },
 ];
 
 /** Make sure to pass GLOSSARY_TNS and COMMON_TNS to where it is called */

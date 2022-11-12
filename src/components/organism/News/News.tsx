@@ -4,7 +4,7 @@ import { COMMON_TNS } from "@/lib/i18n/consts";
 import { useTranslation } from "react-i18next";
 import BlogItem from "@/components/atomic/BlogItem";
 import { TwitterTweetEmbed } from "react-twitter-embed";
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 import Button from "@/components/atomic/Button/Button";
 
 const mediumURL =
@@ -15,22 +15,21 @@ const News = () => {
 
   const [data, setData] = useState<any>();
   const [loaded, setLoaded] = useState(false);
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
+
+  // useEffect(() => {
+  //   axios
+  //     .get("/api/tweets")
+  //     .then((data: any) => {
+  //       console.log(data.data.meta);
+  //       // setTweetsId(data.data.meta.newest_id);
+  //     })
+  //     .catch((e) => {
+  //       console.log(e);
+  //     });
+  // }, []);
 
   useEffect(() => {
-    axios
-      .get("/api/tweets")
-      .then((data: any) => {
-        console.log(data.data.meta);
-        // setTweetsId(data.data.meta.newest_id);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }, []);
-
-  useEffect(() => {
-    const config = {};
     axios
       .get(mediumURL)
       .then((data: any) => {
@@ -85,7 +84,7 @@ const News = () => {
         </div>
         <div>
           <TwitterTweetEmbed
-            tweetId={"1573020039762034689"}
+            tweetId={"1580249833352220673"}
             placeholder={
               <div className="text-lg font-medium font-work text-slate-800 dark:text-slate-200">
                 Loading tweet...
