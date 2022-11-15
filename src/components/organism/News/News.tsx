@@ -61,7 +61,11 @@ const News = () => {
 
   return (
     <section className={"mt-48 md:px-8"}>
-      <p className="text-4xl font-extrabold text-center dark:text-slate-50 text-slate-900 md:text-5xl">
+      <p
+        data-aos="fade-up"
+        data-aos-duration="600"
+        className="text-4xl font-extrabold text-center dark:text-slate-50 text-slate-900 md:text-5xl"
+      >
         {t("newsandupdates")}
       </p>
       <div className="grid gap-6 mt-16 lg:grid-cols-3 md:grid-cols-1 xl:gap-10">
@@ -123,7 +127,16 @@ const News = () => {
         )}
         {data &&
           data?.item.slice(0, 3).map((item: any, index: any) => {
-            return <BlogItem data={item} {...data.profile} key={index} />;
+            return (
+              <div
+                data-aos="fade-up"
+                data-aos-duration="300"
+                data-aos-delay={100 * (index + 1)}
+                key={index}
+              >
+                <BlogItem data={item} {...data.profile} />
+              </div>
+            );
           })}
       </div>
     </section>

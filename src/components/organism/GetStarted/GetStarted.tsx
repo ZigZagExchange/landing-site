@@ -14,15 +14,29 @@ const GetStarted = () => {
   const { t, i18n } = useTranslation([COMMON_TNS]);
   return (
     <section className={"mt-48 md:px-8"}>
-      <p className="text-4xl font-extrabold text-center md:text-5xl dark:text-slate-50 text-slate-900 font-work">
+      <p
+        data-aos="fade-up"
+        data-aos-duration="600"
+        className="text-4xl font-extrabold text-center md:text-5xl dark:text-slate-50 text-slate-900 font-work"
+      >
         {t("Getting Started is Easy")}
       </p>
-      <p className="mt-4 text-lg font-medium text-center md:text-xl font-work text-slate-800 dark:text-slate-200">
+      <p
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="300"
+        className="mt-4 text-lg font-medium text-center md:text-xl font-work text-slate-800 dark:text-slate-200"
+      >
         {t("Trading on L2 has never been easier.")}
       </p>
       <div className="mt-16">
         <div className="lg:flex lg:justify-betweem lg:items-center lg:gap-5">
-          <div className="basis-1/3">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+            className="basis-1/3"
+          >
             <StepOne />
           </div>
 
@@ -34,7 +48,13 @@ const GetStarted = () => {
               alt="narrow-down"
             />
           </div>
-          <div className="items-center justify-center hidden my-2 lg:flex">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="300"
+            data-aos-delay="750"
+            data-aos-offset="50"
+            className="items-center justify-center hidden my-2 lg:flex"
+          >
             <Image
               src="/assets/gradient-arrow-narrow-right.svg"
               width={20}
@@ -42,7 +62,12 @@ const GetStarted = () => {
               alt="narrow-down"
             />
           </div>
-          <div className="basis-1/3">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+            className="basis-1/3"
+          >
             <StepTwo />
           </div>
           <div className="flex items-center justify-center my-2 lg:hidden">
@@ -53,7 +78,13 @@ const GetStarted = () => {
               alt="narrow-down"
             />
           </div>
-          <div className="items-center justify-center hidden my-2 lg:flex ">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="300"
+            data-aos-delay="1550"
+            data-aos-offset="50"
+            className="items-center justify-center hidden my-2 lg:flex "
+          >
             <Image
               src="/assets/gradient-arrow-narrow-right.svg"
               width={20}
@@ -61,7 +92,12 @@ const GetStarted = () => {
               alt="narrow-down"
             />
           </div>
-          <div className="basis-1/3">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="1800"
+            className="basis-1/3"
+          >
             <StepThree />
           </div>
         </div>

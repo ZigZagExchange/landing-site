@@ -122,7 +122,11 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
   return (
     <>
-      <header className="sticky top-0 left-0 right-0 z-40 flex-none w-full px-4 transition-colors duration-500 md:px-8 backdrop-blur lg:z-50 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
+      <header
+        data-aos="fade-down"
+        data-aos-duration="600"
+        className="sticky top-0 left-0 right-0 z-40 flex-none w-full px-4 transition-colors duration-500 md:px-8 backdrop-blur lg:z-50 supports-backdrop-blur:bg-white/60 dark:bg-transparent"
+      >
         <div className="flex items-center justify-between h-20 m-auto 2xl:max-w-screen-2xl xl:max-w-screen-xl ">
           <div className="flex items-center ">
             <Link href="/" passHref={true}>
