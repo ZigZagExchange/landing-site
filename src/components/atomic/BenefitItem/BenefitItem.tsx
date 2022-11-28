@@ -27,8 +27,8 @@ const BenefitItem = ({ data }: BenefitItemProps) => {
     <div
       className={classNames(
         styles.benefitItem,
-        !over && `${data.bgUrl}`,
-        `bg-no-repeat bg-cover bg-center relative bg-gradient-to-r from-primary-600 to-secondary-600 h-72 shadow-2xl
+        !over && `${data.bgUrl} bg-[#2AABEE]/20`,
+        `bg-no-repeat bg-contain bg-center relative bg-gradient-to-r from-primary-600 to-secondary-600 h-72 shadow-2xl
          duration-150 ease-in-out hover:-translate-y-1 hover:scale-100 rounded-xl p-4 cursor-pointer overflow-auto scrollbar`
       )}
       onMouseOver={onMouseOver}

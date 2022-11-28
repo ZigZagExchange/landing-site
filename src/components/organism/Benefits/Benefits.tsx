@@ -7,22 +7,22 @@ import { useRouter } from "next/router";
 const data = [
   {
     title: "Unparalleled Quotes & Deep Liquidity",
-    bgUrl: "bg-[url('/assets/unparalled-quotes.svg')]",
+    bgUrl: "bg-[url('/assets/1.png')]",
     text: "We offer extremely low slippage for trades of all sizes, quotes that compete with ones offered by centralized exchanges",
   },
   {
     title: "High Scalability",
-    bgUrl: "bg-[url('/assets/security.svg')]",
+    bgUrl: "bg-[url('/assets/2.png')]",
     text: "By using ZK Rollups we are able to offer near-zero swap fees with nearly instantaneous transactions.",
   },
   {
     title: "Decentralized & Secure",
-    bgUrl: "bg-[url('/assets/fast-withdrawl.svg')]",
+    bgUrl: "bg-[url('/assets/3.png')]",
     text: "ZigZag aims to be fully decentralized and open source.",
   },
   {
     title: "CEX Price Feeds",
-    bgUrl: "bg-[url('/assets/unparalled-quotes.svg')]",
+    bgUrl: "bg-[url('/assets/4.png')]",
     text: "All price feeds are fetched from centralized exchanges,  always guaranteeing the best price possible.",
   },
 ];
