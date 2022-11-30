@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import classNames from "classnames";
-import Image from "next/image";
+import { COMMON_TNS } from "@/lib/i18n/consts";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import { Menu, Transition } from "@headlessui/react";
 import { MenuIcon } from "@heroicons/react/solid";
 import { FaDiscord, FaTwitter, FaTelegram, FaGithub } from "react-icons/fa";
@@ -14,6 +16,8 @@ type MobileDropdownProps = {
 };
 
 export default function Dropdown({ options, className }: MobileDropdownProps) {
+  const { t, i18n } = useTranslation([COMMON_TNS]);
+
   return (
     <Menu
       as="div"
@@ -36,7 +40,18 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
       >
         <Menu.Items className="absolute pt-2 mt-2 origin-top-right border rounded-md shadow-lg w-44 dark:bg-background-900 dark:border-foreground-400 center ring-1 ring-black ring-opacity-5 focus:outline-none">
           {options.map((item: any, index) => {
-            return (
+            return item.value === "contact" ? (
+              <Link href={item.url}>
+                <a
+                  rel="noopener noreferrer"
+                  className={
+                    "flex px-4 py-2 text-sm items-center text-foreground-900 font-work !font-normal"
+                  }
+                >
+                  {item.label}
+                </a>
+              </Link>
+            ) : (
               <Menu.Item key={index}>
                 {({ active }) => (
                   <a

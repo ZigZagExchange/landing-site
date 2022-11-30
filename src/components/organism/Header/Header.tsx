@@ -51,19 +51,29 @@ const languages = [
 ];
 
 const supportOptions = [
-  { value: "helpcenter", label: "Help Center" },
-  { value: "documents", label: "Documents" },
-  { value: "community", label: "Community Support" },
-  { value: "governance", label: "Governance" },
+  { value: "https://docs.zigzag.exchange/", label: "Documents" },
+  { value: "https://discord.com/invite/zigzag", label: "Community Support" },
+  { value: "https://forum.zigzaglabs.io/", label: "Governance" },
 ];
 
 const mobileOptions = [
-  { value: "helpcenter", label: "Help Center" },
-  { value: "documents", label: "Documents" },
-  { value: "community", label: "Community Support" },
-  { value: "governance", label: "Governance" },
-  { value: "blog", label: "Blog", url: "#" },
-  { value: "contact", label: "Contact", url: "#" },
+  {
+    value: "documents",
+    label: "Documents",
+    url: "https://docs.zigzag.exchange/",
+  },
+  {
+    value: "community",
+    label: "Community Support",
+    url: "https://discord.com/invite/zigzag",
+  },
+  {
+    value: "governance",
+    label: "Governance",
+    url: "https://forum.zigzaglabs.io/",
+  },
+  { value: "blog", label: "Blog", url: "https://blog.zigzag.exchange/" },
+  { value: "contact", label: "Contact", url: "/contact" },
 ];
 
 /** Make sure to pass GLOSSARY_TNS and COMMON_TNS to where it is called */
@@ -112,7 +122,11 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
   return (
     <>
-      <header className="sticky top-0 left-0 right-0 z-40 flex-none w-full px-4 transition-colors duration-500 md:px-8 backdrop-blur lg:z-50 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
+      <header
+        data-aos="fade-down"
+        data-aos-duration="600"
+        className="sticky top-0 left-0 right-0 z-40 flex-none w-full px-4 transition-colors duration-500 md:px-8 backdrop-blur lg:z-50 supports-backdrop-blur:bg-white/60 dark:bg-transparent"
+      >
         <div className="flex items-center justify-between h-20 m-auto 2xl:max-w-screen-2xl xl:max-w-screen-xl ">
           <div className="flex items-center ">
             <Link href="/" passHref={true}>

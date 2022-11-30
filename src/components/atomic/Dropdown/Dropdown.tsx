@@ -46,7 +46,9 @@ export default function Dropdown({
                 <Menu.Item key={index}>
                   {({ active }) => (
                     <a
-                      href="#"
+                      href={item.value}
+                      rel="noopener noreferrer"
+                      target="_blank"
                       className={classNames(
                         active ? " text-background-900" : "text-background-900",
                         "block px-4 py-2 text-sm dark:text-foreground-800 hover:dark:text-foreground-900 text-background-900 hover:underline hover:underline-offset-2"

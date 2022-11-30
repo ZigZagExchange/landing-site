@@ -104,3 +104,22 @@ main {
     opacity: 0.5;
   }
 }
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(12, 207, 207) rgba(42, 171, 238);
+}
+
+/* For Chrome, EDGE, Opera, Others */
+.scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: rgb(18, 41, 54);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(21, 134, 134);
+}

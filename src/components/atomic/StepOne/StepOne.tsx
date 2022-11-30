@@ -26,11 +26,19 @@ const StepOne = ({ className }: any) => {
         )}
       </p>
       <div className="flex flex-col items-center justify-center pt-8 pb-6 mt-4 text-center rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 mix-blend-hard-light">
-        <Button className="mx-8 text-xs font-bold uppercase" type="gradient">
+        <Button
+          className="mx-8 text-xs font-bold uppercase"
+          type="gradient"
+          disabled
+        >
           {t("Start Trading")}
         </Button>
         <ArrowNarrowDownIcon className="w-5 h-5 my-2" aria-hidden="true" />
-        <Button className="mx-8 text-xs font-bold uppercase" type="gradient">
+        <Button
+          className="mx-8 text-xs font-bold uppercase"
+          type="gradient"
+          disabled
+        >
           {t("connect wallet")}
         </Button>
       </div>
