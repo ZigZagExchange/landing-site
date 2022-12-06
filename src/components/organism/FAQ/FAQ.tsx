@@ -25,7 +25,7 @@ const FAQ = React.forwardRef<any, props>(
         ref={ref}
         className={classNames(
           styles.faq,
-          "grid md:grid-cols-5 lg:gap-4 md:gap-0 mt-52 md:px-8 grid-cols-1"
+          "md:grid md:grid-cols-5 lg:gap-4 md:gap-0 mt-52 md:px-8 grid-cols-1"
         )}
       >
         <div className="md:col-start-1 md:col-end-3">
@@ -72,11 +72,7 @@ const FAQ = React.forwardRef<any, props>(
           </div>
         </div>
         <div className="col-span-2 md:col-end-6 ">
-          <div
-            data-aos="fade-left"
-            data-aos-duration="600"
-            data-aos-delay="900"
-          >
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="900">
             <Disclosure>
               {({ open }) => (
                 <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200">
@@ -124,11 +120,7 @@ const FAQ = React.forwardRef<any, props>(
               )}
             </Disclosure>
           </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="600"
-            data-aos-delay="1100"
-          >
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="1100">
             <Disclosure>
               {() => (
                 <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200">
@@ -181,11 +173,7 @@ const FAQ = React.forwardRef<any, props>(
               )}
             </Disclosure>
           </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="600"
-            data-aos-delay="1300"
-          >
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="1300">
             <Disclosure>
               {({ open }) => (
                 <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200">
@@ -233,11 +221,7 @@ const FAQ = React.forwardRef<any, props>(
               )}
             </Disclosure>
           </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="600"
-            data-aos-delay="1500"
-          >
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="1500">
             <Disclosure>
               {({ open }) => (
                 <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200">
@@ -295,7 +279,6 @@ const FAQ = React.forwardRef<any, props>(
                           ),
                         }}
                       />
-                      {/* {t("To start using zigzag")} */}
                     </Disclosure.Panel>
                   </Transition>
                 </div>
