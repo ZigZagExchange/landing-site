@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "animate.css/animate.min.css";
+@import "aos/dist/aos.css";
+
+@layer utilities {
+  .link {
+    @apply font-bold hover:text-background-800 hover:underline;
+  }
+
+  .dark .link {
+    @apply font-bold hover:text-foreground-800;
+  }
+}
+
+body {
+  color: black;
+  background-color: theme("colors.background.50");
+  -webkit-font-smoothing: antialiased;
+  /* font-family: "Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,    Noto Color Emoji"; */
+}
+/* 
+a[href]:not([hidden]):not(.unstyled-a) {
+  @apply link;
+} */
+
+.dark body {
+  color: aliceblue;
+  background-color: #07071c;
+}
+
+.slick-slide {
+  width: auto !important;
+}
+
+body {
+  overflow: auto;
+  @apply bg-primary-500;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  /* height: 5000px; */
+  /* flex-direction: column;
+  flex: 1 1 0;
+  text-align: center;
+  height: 5000px; */
+  /* background-image: url('../../public/assets/blurred-ellipses--top.svg');
+  background-size: 100% 150%;
+  background-position-y: 145%;
+  background-repeat: no-repeat; */
+  position: relative;
+}
+
+/* main::after {
+  z-index: 0;
+  content: '';
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url('../../public/assets/blurred-ellipses--bottom.svg');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.6;
+} */
+
+@media only screen and (max-width: 1440px) {
+  main:after {
+    background-position: right -10% bottom;
+    opacity: 0.8;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  main:before {
+    background-position: right -10% bottom;
+    background-size: 110%;
+    opacity: 0.8;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main:before {
+    background-position: right -10% bottom;
+    background-size: 150%;
+    opacity: 0.8;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main:before {
+    background-position: right 0% bottom;
+    background-size: 200%;
+    opacity: 0.5;
+  }
+}
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(12, 207, 207) rgba(42, 171, 238);
+}
+
+/* For Chrome, EDGE, Opera, Others */
+.scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: rgb(18, 41, 54);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(21, 134, 134);
+}
