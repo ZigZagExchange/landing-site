@@ -7,8 +7,8 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 // import { useTheme } from "next-themes";
 import Button from "@/components/atomic/Button/Button";
 
-const mediumURL =
-  "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ZigZagExchange";
+/* const mediumURL =
+  "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ZigZagExchange"; */
 
 const News = () => {
   const { t, i18n } = useTranslation([COMMON_TNS]);
@@ -29,7 +29,7 @@ const News = () => {
   //     });
   // }, []);
 
-  useEffect(() => {
+/*   useEffect(() => {
     axios
       .get(mediumURL)
       .then((data: any) => {
@@ -53,7 +53,7 @@ const News = () => {
         setData({ error: e.toJSON() });
         console.log(e);
       });
-  }, []);
+  }, []); */
 
   const onLoadTweet = () => {
     setLoaded(true);
@@ -71,7 +71,7 @@ const News = () => {
       <div className="grid gap-6 mt-16 lg:grid-cols-3 md:grid-cols-1 xl:gap-10">
         <div>
           <TwitterTweetEmbed
-            tweetId={"1584945659664551936"}
+            tweetId={"1631571511600373766"}
             options={{
               // cards: "hidden",
               height: 400,
@@ -86,9 +86,10 @@ const News = () => {
             onLoad={onLoadTweet}
           />
         </div>
+
         <div>
           <TwitterTweetEmbed
-            tweetId={"1580249833352220673"}
+            tweetId={"1618696429534613505"}
             placeholder={
               <div className="text-lg font-medium font-work text-slate-800 dark:text-slate-200">
                 Loading tweet...
@@ -97,9 +98,10 @@ const News = () => {
             onLoad={onLoadTweet}
           />
         </div>
+
         <div>
           <TwitterTweetEmbed
-            tweetId={"1578418911363465225"}
+            tweetId={"1638205127658991616"}
             placeholder={
               <div className="text-lg font-medium font-work text-slate-800 dark:text-slate-200">
                 Loading tweet...
@@ -108,6 +110,7 @@ const News = () => {
             onLoad={onLoadTweet}
           />
         </div>
+
         {loaded && (
           <div className="flex items-center justify-center col-span-1 -mt-4 lg:col-span-3">
             <a
@@ -116,12 +119,12 @@ const News = () => {
               target="_blank"
               className="!hover:no-underline"
             >
-              <Button
+              {/* <Button
                 className="px-8 py-2.5 text-base font-semibold  font-work md:w-100 hover:no-underline "
                 type="gradient"
               >
                 {t("Learn more")}
-              </Button>
+              </Button> */}
             </a>
           </div>
         )}
