@@ -14,7 +14,7 @@ const data = [
   {
     date: "October 2021",
     title: "Launch",
-    text: "Launch on zkSync 1.0 with initial pairs (ETH/USDT, ETH/USDC, USDC/USDT)",
+    text: "Launch on zkSync Lite with initial pairs (ETH/USDT, ETH/USDC, USDC/USDT)",
   },
   {
     date: "November 2021",

@@ -125,7 +125,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
       <header
         data-aos="fade-down"
         data-aos-duration="600"
-        className="sticky top-0 left-0 right-0 z-40 flex-none w-full px-4 transition-colors duration-500 md:px-8 backdrop-blur lg:z-50 supports-backdrop-blur:bg-white/60 dark:bg-transparent"
+        className="sticky top-0 left-0 right-0 z-40 flex-none w-full px-4 transition-colors duration-500 md:px-8 backdrop-blur lg:z-10 supports-backdrop-blur:bg-white/60 dark:bg-transparent"
       >
         <div className="flex items-center justify-between h-20 m-auto 2xl:max-w-screen-2xl xl:max-w-screen-xl ">
           <div className="flex items-center ">
@@ -179,7 +179,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
             </div>
           </div>
           <div className="flex items-center justify-center ">
-            <div className="hidden gap-6 lg:flex">
+            <div className="hidden gap-6 mt-1 lg:flex">
               <a
                 href="https://twitter.com/ZigZagExchange"
                 rel="noopener noreferrer"
@@ -187,7 +187,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               >
                 <FaTwitter
                   className="cursor-pointer dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
-                  size={18}
+                  size={20}
                 />
               </a>
               <a
@@ -197,7 +197,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               >
                 <FaGithub
                   className="cursor-pointer dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
-                  size={18}
+                  size={20}
                 />
               </a>
               <a
@@ -207,7 +207,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               >
                 <FaDiscord
                   className="cursor-pointer dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
-                  size={18}
+                  size={20}
                 />{" "}
               </a>
 
@@ -218,11 +218,11 @@ export const Header: React.FC<HeaderProps> = (props) => {
               >
                 <FaTelegram
                   className="cursor-pointer dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
-                  size={18}
+                  size={20}
                 />
               </a>
             </div>
-            <div className="flex items-center ml-2 mr-4 md:ml-6 lg:border-l lg:border-gray-500">
+            <div className="flex items-center ml-2 mr-4 md:ml-6">
               <Listbox value={selected} onChange={handleSelectLang}>
                 <div className="relative mt-1">
                   <Listbox.Button className="relative flex items-center w-full gap-2 py-[3px] pl-3 pr-8 text-sm font-semibold text-left cursor-pointer hover:text-primary-900 font-work dark:text-white-900 text-foreground400 ">
@@ -302,7 +302,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               </div>
             </div>
 
-            <div className="border-gray-500 md:border-l">
+            <div>
               <a
                 href="https://trade.zigzag.exchange/"
                 rel="noopener noreferrer"
@@ -310,7 +310,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 className="!hover:no-underline"
               >
                 <Button
-                  className="text-xs font-bold uppercase md:ml-8"
+                  className="text-xs font-bold uppercase "
                   type="gradient"
                 >
                   {t("Start Trading")}

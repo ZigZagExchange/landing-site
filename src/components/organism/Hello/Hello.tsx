@@ -58,39 +58,103 @@ const Hello = ({ onClickRollupBtn }: props) => {
           className="!hover:no-underline"
         >
           <Button
-            className="px-8 py-2.5 text-base font-semibold  font-work md:w-100 hover:no-underline"
+            className="px-2 py-2.5 text-base font-semibold  font-work md:w-100 hover:no-underline"
             type="gradient"
           >
-            {t("Start Trading")}
+            {t("Trade on zkSync Lite")}
           </Button>
         </a>
-        <Button
-          className="py-2 text-base font-semibold border-2 rounded-lg whitespace-nowrap dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
-          onClick={onClickRollupBtn}
+{/*         <a
+          
+          rel="noopener noreferrer"
+          target="_blank"
+          className="!hover:no-underline"
         >
-          {t("What Are ZK Rollups?")}
-        </Button>
+          <Button
+            className="px-2 py-2.5 text-base font-semibold font-work md:w-100 hover:no-underline"
+            type="gradient"
+          >
+            {t("Trade on zkSync Era (Coming Soon)")}
+          </Button>
+        </a> */}
+        <a
+          href="https://swap.zigzag.exchange/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="!hover:no-underline"
+        >
+          <Button
+            className="px-6 py-2.5 text-base font-semibold  font-work md:w-100 hover:no-underline"
+            type="gradient"
+          >
+            {t("Swap on Arbitrum")}
+          </Button>
+        </a>
       </div>
 
-      <div
-        data-aos="zoom-in"
+      {/* <div
+        data-aos="fade-up"
         data-aos-duration="600"
-        className="absolute hidden top-28 2xl:left-28 xl:left-16 xl:block"
+        data-aos-delay="600"
+        className="flex flex-col items-center justify-center gap-4 mx-16 mt-8 text-center md:mx-0 md:flex-row"
       >
-        <PriceCard symbol="BTC" name="bitcoin" fillColor="#F7931A" />
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          className="!hover:no-underline"
+        >
+          <Button
+            className="px-3 py-2.5 text-base font-semibold  font-work md:w-100 hover:no-underline"
+            type="gradient"
+          >
+            {t("INVISIBL3: DEX + Perps for professionals that want privacy, low fees & fast transactions (Coming Soon)")}
+          </Button>
+        </a>
+      </div> */}
+
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="600"
+        className="absolute hidden top-1 2xl:left-38 xl:left-16 xl:block"
+      >
+        <PriceCard symbol="BTC" name="bitcoin" fillColor="#F7931A"/>
       </div>
 
       <div
         data-aos="zoom-in"
         data-aos-duration="600"
-        className="absolute hidden bottom-18 2xl:left-44 xl:left-36 xl:block"
+        className="absolute hidden top-1 right-1 xl:right-1 xl:block"
+      >
+        <PriceCard symbol="AAVE" name="aave" fillColor="#A35FA4" />
+      </div>
+
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="600"
+        className="absolute hidden top-52 2xl:left-44 xl:left-44 xl:block"
+      >
+        <PriceCard symbol="DAI" name="dai" fillColor="#F9AF1C" />
+      </div>
+
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="600"
+        className="absolute hidden top-26 left-10 xl:left-10 xl:block"
+      >
+        <PriceCard symbol="LINK" name="Chainlink" fillColor="#2A5ADA" />
+      </div>
+
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="600"
+        className="absolute hidden top-22 2xl:right-1 xl:right-1 xl:block"
       >
         <PriceCard
           symbol="ZZ"
           name="zigzag-2"
           title="ZigZag"
           logo="/assets/logo.svg"
-          fillColor="#8247E5"
+          fillColor="#04DBDA"
         />
       </div>
 
@@ -113,7 +177,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           name="zigzag-2"
           title="ZigZag"
           logo="/assets/logo.svg"
-          fillColor="#8247E5"
+          fillColor="#04DBDA"
         />
         <PriceCard symbol="ETH" name="ethereum" fillColor="#627EEA" />
       </div>
