@@ -64,7 +64,7 @@ const PriceCard = ({
 
     const id = setInterval(() => {
       fetchData(); // <-- (3) invoke in interval callback
-    }, 60000);
+    }, 10000);
 
     fetchData(); // <-- (2) invoke on mount
 

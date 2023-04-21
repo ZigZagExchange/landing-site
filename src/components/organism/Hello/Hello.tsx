@@ -78,7 +78,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           </Button>
         </a> */}
         <a
-          href="https://swap.zigzag.exchange/"
+          href="https://arbitrum.zigzag.exchange/"
           rel="noopener noreferrer"
           target="_blank"
           className="!hover:no-underline"
@@ -87,7 +87,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
             className="px-6 py-2.5 text-base font-semibold  font-work md:w-100 hover:no-underline"
             type="gradient"
           >
-            {t("Swap on Arbitrum")}
+            {t("Trade on Arbitrum")}
           </Button>
         </a>
       </div>

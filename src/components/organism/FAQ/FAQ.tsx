@@ -25,7 +25,7 @@ const FAQ = React.forwardRef<any, props>(
         ref={ref}
         className={classNames(
           styles.faq,
-          "grid md:grid-cols-5 lg:gap-4 md:gap-0 mt-52 md:px-8 grid-cols-1"
+          "grid md:grid-cols-5 lg:gap-4 md:gap-0 mt-52 md:px-8 grid-cols-1 hidden md:block" /* hidden on mobile */ 
         )}
       >
         <div className="md:col-start-1 md:col-end-3">
@@ -49,7 +49,7 @@ const FAQ = React.forwardRef<any, props>(
                 1: (
                   <a
                     href="https://discord.com/invite/zigzag"
-                    className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
+                    className="text-[#7289da] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
                     rel="noopener noreferrer"
                     target="_blank"
                   />

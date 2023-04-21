@@ -35,10 +35,6 @@ const content = [
     category: "Links",
     items: [
       {
-        name: "dApp",
-        url: "https://trade.zigzag.exchange/",
-      },
-      {
         name: "zkSync",
         url: "https://zksync.io/",
       },
@@ -87,7 +83,7 @@ const Footer = () => {
       <div
         className={classNames(
           styles.footer,
-          "grid grid-cols-1 md:grid-cols-3 mt-44 lg:gap-16 gap-10 pb-16  border-b border-slate-400 dark:border-slate-400 "
+          "grid grid-cols-1 md:grid-cols-3 mt-44 lg:gap-16 gap-10 pb-16"
         )}
       >
         <div>
