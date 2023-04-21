@@ -25,7 +25,7 @@ const FAQ = React.forwardRef<any, props>(
         ref={ref}
         className={classNames(
           styles.faq,
-          "grid md:grid-cols-5 lg:gap-4 md:gap-0 mt-52 md:px-8 grid-cols-1 hidden md:block" /* hidden on mobile */ 
+          "hidden md:grid md:grid-cols-5 lg:gap-4 md:gap-0 mt-52 md:px-8 grid-cols-1" /* hidden on mobile */ 
         )}
       >
         <div className="md:col-start-1 md:col-end-3">
