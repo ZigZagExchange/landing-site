@@ -64,8 +64,8 @@ const Hello = ({ onClickRollupBtn }: props) => {
             {t("Trade on zkSync Lite")}
           </Button>
         </a>
-{/*         <a
-          
+         <a
+          href="https://zap.zigzag.exchange/"
           rel="noopener noreferrer"
           target="_blank"
           className="!hover:no-underline"
@@ -74,9 +74,9 @@ const Hello = ({ onClickRollupBtn }: props) => {
             className="px-2 py-2.5 text-base font-semibold font-work md:w-100 hover:no-underline"
             type="gradient"
           >
-            {t("Trade on zkSync Era (Coming Soon)")}
+            {t("Cross chain Swap with ZAP")}
           </Button>
-        </a> */}
+        </a>
         <a
           href="https://arbitrum.zigzag.exchange/"
           rel="noopener noreferrer"
