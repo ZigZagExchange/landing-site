@@ -95,7 +95,7 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
                 size={22}
               />
             </a>
-            <a
+{/*             <a
               href="https://t.co/yk7f1m0nmE"
               rel="noopener noreferrer"
               target="_blank"
@@ -104,7 +104,7 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
                 className="cursor-pointer text-foreground-900 hover:text-gray-100"
                 size={22}
               />
-            </a>
+            </a> */}
 
             <a
               href="https://t.me/zigzagexchange"
