@@ -171,7 +171,7 @@ const Footer = () => {
       </div>
       <div className="py-10 text-center">
         <p className="font-normal font-work text-slate-600 dark:text-slate-400">
-          © 2022 ZigZag. All rights reserved.
+          © 2023 ZigZag. All rights reserved.
         </p>
       </div>
     </div>

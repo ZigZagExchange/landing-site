@@ -77,7 +77,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
             {t("Cross chain Swap with ZAP")}
           </Button>
         </a>
-        <a
+        {/* <a
           href="https://arbitrum.zigzag.exchange/"
           rel="noopener noreferrer"
           target="_blank"
@@ -89,7 +89,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           >
             {t("Trade on Arbitrum")}
           </Button>
-        </a>
+        </a> */}
       </div>
 
       {/* <div
