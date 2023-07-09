@@ -71,7 +71,7 @@ const News = () => {
       <div className="grid gap-6 mt-16 lg:grid-cols-3 md:grid-cols-1 xl:gap-10">
         <div>
           <TwitterTweetEmbed
-            tweetId={"1669006479112716290"}
+            tweetId={"1677432469082218496"}
             options={{
               // cards: "hidden",
               height: 400,
@@ -88,7 +88,7 @@ const News = () => {
         </div>
         <div>
           <TwitterTweetEmbed
-            tweetId={"1649101307532414978"}
+            tweetId={"1669006479112716290"}
             placeholder={
               <div className="text-lg font-medium font-work text-slate-800 dark:text-slate-200">
                 Loading tweet...

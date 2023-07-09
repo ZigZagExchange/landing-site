@@ -52,7 +52,7 @@ const languages = [
 
 const supportOptions = [
   { value: "https://docs.zigzag.exchange/", label: "Documents" },
-  /* { value: "https://discord.com/invite/zigzag", label: "Community Support" }, */
+  { value: "https://discord.com/invite/zigzagexchange", label: "Community Support" }, 
   { value: "https://forum.zigzaglabs.io/", label: "Governance" },
 ];
 
@@ -62,11 +62,11 @@ const mobileOptions = [
     label: "Documents",
     url: "https://docs.zigzag.exchange/",
   },
-  /* {
+  {
     value: "community",
     label: "Community Support",
-    url: "https://discord.com/invite/zigzag",
-  }, */
+    url: "https://discord.com/invite/zigzagexchange",
+  }, 
   {
     value: "governance",
     label: "Governance",
@@ -200,8 +200,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
                   size={20}
                 />
               </a>
-{/*               <a
-                href="https://discord.com/invite/zigzag"
+               <a
+                href="https://discord.com/invite/zigzagexchange"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -209,7 +209,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                   className="cursor-pointer dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
                   size={20}
                 />{" "}
-              </a> */}
+              </a> 
 
               <a
                 href="https://t.me/zigzagexchange"

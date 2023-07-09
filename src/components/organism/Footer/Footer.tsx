@@ -59,10 +59,10 @@ const content = [
         name: "Twitter",
         url: "https://twitter.com/ZigZagExchange",
       },
-/*       {
+      {
         name: "Discord",
-        url: "https://discord.com/invite/zigzag",
-      }, */
+        url: "https://discord.com/invite/zigzagexchange",
+      },  
       {
         name: "Telegram",
         url: "https://t.me/zigzagexchange",
@@ -126,14 +126,14 @@ const Footer = () => {
             >
               <BsGithub className="w-6 h-6 cursor-pointer " />
             </a>
-{/*             <a
-              href="https://t.co/yk7f1m0nmE"
+            <a
+              href="https://discord.com/invite/zigzagexchange"
               className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
             >
               <BsDiscord className="w-6 h-6 cursor-pointer " />
-            </a> */}
+            </a> 
             <a
               href="https://t.me/zigzagexchange"
               className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
