@@ -48,7 +48,7 @@ const FAQ = React.forwardRef<any, props>(
               components={{
                 1: (
                   <a
-                    href="https://discord.com/invite/zigzagexchange"
+                    href="https://discord.gg/znyRTSWTJQ"
                     className="text-[#0088cc] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
                     rel="noopener noreferrer"
                     target="_blank"

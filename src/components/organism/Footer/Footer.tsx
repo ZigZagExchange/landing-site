@@ -61,7 +61,7 @@ const content = [
       },
       {
         name: "Discord",
-        url: "https://discord.com/invite/zigzagexchange",
+        url: "https://discord.gg/znyRTSWTJQ",
       },  
       {
         name: "Telegram",
@@ -127,7 +127,7 @@ const Footer = () => {
               <BsGithub className="w-6 h-6 cursor-pointer " />
             </a>
             <a
-              href="https://discord.com/invite/zigzagexchange"
+              href="https://discord.gg/znyRTSWTJQ"
               className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"

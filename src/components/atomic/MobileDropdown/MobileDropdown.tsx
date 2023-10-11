@@ -96,7 +96,7 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
               />
             </a>
             <a
-              href="https://discord.com/invite/zigzagexchange"
+              href="https://discord.gg/znyRTSWTJQ"
               rel="noopener noreferrer"
               target="_blank"
             >

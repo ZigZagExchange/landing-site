@@ -52,7 +52,7 @@ const languages = [
 
 const supportOptions = [
   { value: "https://docs.zigzag.exchange/", label: "Documents" },
-  { value: "https://discord.com/invite/zigzagexchange", label: "Community Support" }, 
+  { value: "https://discord.gg/znyRTSWTJQ", label: "Community Support" }, 
   { value: "https://forum.zigzaglabs.io/", label: "Governance" },
 ];
 
@@ -65,7 +65,7 @@ const mobileOptions = [
   {
     value: "community",
     label: "Community Support",
-    url: "https://discord.com/invite/zigzagexchange",
+    url: "https://discord.gg/znyRTSWTJQ",
   }, 
   {
     value: "governance",
@@ -201,7 +201,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 />
               </a>
                <a
-                href="https://discord.com/invite/zigzagexchange"
+                href="https://discord.gg/znyRTSWTJQ"
                 rel="noopener noreferrer"
                 target="_blank"
               >
